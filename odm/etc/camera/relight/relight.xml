@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Config>
+    <center>140</center>
+    <sigma>0.2</sigma>
+    <boostFactor>1.0</boostFactor>
+    <pyramidMinSize>5</pyramidMinSize>
+    <minPixel>-100</minPixel>
+    <maxPixel>365</maxPixel>
+    <LocalToneMappingEnable>1</LocalToneMappingEnable>
+    <SigmaCurve>
+        <bitWidth>12</bitWidth>
+        <nrScale>1.0f</nrScale>
+        <iso_th>0</iso_th>
+        <low_sigma_th>10</low_sigma_th>
+        <high_sigma_th>18</high_sigma_th>
+        <min_sigma_bm>8.0f</min_sigma_bm>
+        <min_sigma_dm>2</min_sigma_dm>
+        <curve_K_A>0.00005750f</curve_K_A>
+        <curve_K_B>0.00453723f</curve_K_B>
+        <curve_B_A>0.00000015f</curve_B_A>
+        <curve_B_B>0.00006062f</curve_B_B>
+        <bmy_th0>10</bmy_th0>
+        <bmy_th1>25</bmy_th1>
+        <bmy_b>5.0f</bmy_b>
+        <dmuv_th>127</dmuv_th>
+        <dmuv_b>8</dmuv_b>
+    </SigmaCurve>
+
+    <MotionDetect>
+        <MotionLowGray>5</MotionLowGray>
+        <MotionHighGray>20</MotionHighGray>
+        <MotionRatio>5</MotionRatio>
+        <PureColorMotionDetection>0.2</PureColorMotionDetection>
+        <DarkThresh>255</DarkThresh>
+        <night_lumaavg>15</night_lumaavg>
+        <bMotionDetectionSigma>1</bMotionDetectionSigma>
+        <bMotionDetectionUV>1</bMotionDetectionUV>
+    </MotionDetect>
+
+    <MotionCorrection>
+        <underEx_val>25</underEx_val>
+        <overEx_val>235</overEx_val>
+        <detectionSigma_iso_val>3200</detectionSigma_iso_val>
+        <inpaint_iso_val>800</inpaint_iso_val>
+        <denoise_iso_val>400</denoise_iso_val>
+        <gf_radius>2</gf_radius>
+        <gf_epsilon>0.0001f</gf_epsilon>
+        <gf_epsilon_b1>0.0003f</gf_epsilon_b1>
+        <gf_epsilon_k1>0.0001f</gf_epsilon_k1>
+        <gf_epsilon_b2>0.0006f</gf_epsilon_b2>
+        <gf_epsilon_k2>0.0002f</gf_epsilon_k2>
+     </MotionCorrection>
+</Config>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="GB2312"?>
+<MemPoolConfig  Version="Mempoolcfg_V2.0" Time="20160326">
+    <Gloable>
+        <Enable>1</Enable>
+        <RamRatio>0.3</RamRatio>
+        <upperLimitInMB>320</upperLimitInMB>
+        <upperLimitInMBup4GB>400</upperLimitInMBup4GB>
+    </Gloable>
+    <Strategy Enable="1">
+        <!-- reuse_percent-->
+        <default_ratio>0.5</default_ratio>
+        <size1KB_less>0.0</size1KB_less>
+        <size1MB_less>0.5</size1MB_less>
+        <size1WxH_less>0.5</size1WxH_less>
+        <sizeNxWxH>
+            <size1WxH>0.5</size1WxH><!-- [size1WxH,size2WxH)-->
+            <size2WxH>0.5</size2WxH>
+            <size3WxH>0.5</size3WxH>
+            <size4WxH>0.5</size4WxH>
+            <size5WxH>0.5</size5WxH>
+            <size6WxH>0.5</size6WxH>
+            <size7WxH>0.5</size7WxH>
+            <size8WxH>0.5</size8WxH>
+            <size9WxH>0.5</size9WxH>
+            <size10WxH>0.5</size10WxH>
+        </sizeNxWxH>
+    </Strategy>
+    <PreAlloc Enable="1">
+        <Algo name="common">
+        </Algo>
+        <Algo name="colorfusiondsp">
+        </Algo>
+        <Algo name="davincidsp">
+        </Algo>
+        <Algo name="hdrdsp">
+        </Algo>
+        <Algo name="sr">
+            <AlgoBuffer multiple="1.1">1</AlgoBuffer>
+            <AlgoBuffer multiple="2.1">1</AlgoBuffer>
+        </Algo>
+        <Algo name="dualdepth">
+            <AlgoBuffer multiple="4.0">2</AlgoBuffer>
+            <AlgoBuffer multiple="2.3">1</AlgoBuffer>
+            <AlgoBuffer multiple="1.5">1</AlgoBuffer>
+        </Algo>
+        <Algo name="edof">
+            <AlgoBuffer multiple="1.5">1</AlgoBuffer>
+            <AlgoBuffer multiple="4.1">1</AlgoBuffer>
+        </Algo>
+        <Algo name="refocus">
+            <AlgoBuffer multiple="3.0">2</AlgoBuffer>
+            <AlgoBuffer multiple="1.0">1</AlgoBuffer>
+            <AlgoBuffer multiple="2.1">1</AlgoBuffer>
+            <AlgoBuffer multiple="4.1">1</AlgoBuffer>
+            <AlgoBuffer multiple="2.0">1</AlgoBuffer>
+            <AlgoBuffer multiple="3.3">1</AlgoBuffer>
+        </Algo>
+        <Algo name="multidenoisedsp">
+        </Algo>
+        <Algo name="HwBeautyPpAlgo">
+        </Algo>
+        <Algo name="convertfromstride">
+            <AlgoBuffer multiple="0.0">1</AlgoBuffer>
+        </Algo>
+        <Algo name="converttostride">
+            <AlgoBuffer multiple="0.0">1</AlgoBuffer>
+        </Algo>
+        <Algo name="davinci">
+            <AlgoBuffer multiple="0.0">1</AlgoBuffer>
+        </Algo>
+    </PreAlloc>
+    <Monitor Enable="1">
+        <AllocLimit Enable="1" DefalutSizeInMB="400">
+            <Algo name="multidenoisedsp" limitSizeInMB="450"/>
+            <Algo name="pp_bshutter" limitSizeInMB="550"/>
+            <Algo name="opticalzoomdsp" limitSizeInMB="750"/>
+        </AllocLimit>
+        <EfficiencyWarn Enable="1">
+            <AllSizeThresholdInMB>700</AllSizeThresholdInMB>
+            <EfficiencyRatio>0.1</EfficiencyRatio>
+        </EfficiencyWarn>
+    </Monitor>
+</MemPoolConfig>

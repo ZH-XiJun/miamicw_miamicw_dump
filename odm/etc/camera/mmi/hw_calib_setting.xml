@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<Settings>
+  <Circle_Board_Info> "{0,17,14.0,41,31}"</Circle_Board_Info>
+  <Circle_Board_ROI_Ratio> "{0.0, 1.0, 0, 0.48}"</Circle_Board_ROI_Ratio>
+  <Calib_Output_Threshold> "{-1000.0, -1000.0, -1000.0, -10000.0, -10000.0, -500.0, -1000.0, -1000.0, -1000.0, -10000.0, -10000.0, -500.0},{1000.0, 1000.0, 1000.0, 10000.0, 10000.0, 500.0, 1000.0, 1000.0, 1000.0, 10000.0, 10000.0, 500.0},3.0" </Calib_Output_Threshold>
+  <Test_2D_Images_Mode>0</Test_2D_Images_Mode>
+  <Test_2D_Images_Paras>"{-52.711815, 10.716472, -48.719410, -199.953903, 1.496347, 7.676925, 78.560013, -11.825746, 76.912315, -6.795475, -207.240097, -12.913443}"</Test_2D_Images_Paras>
+  <Binary_Method>1</Binary_Method>
+  <Binary_Threshold>100</Binary_Threshold>
+   <InputImagesFile>"all_images.xml"</InputImagesFile>
+  <Calibrate_Pattern>"ASYMMETRIC_CIRCLES_GRID"</Calibrate_Pattern>
+  <Debug_Level>1</Debug_Level>
+  <DetectionAlgorithm>3</DetectionAlgorithm>
+  <Module_Name>"001"</Module_Name>
+  <HW_Calib_Version>1</HW_Calib_Version>
+</Settings>
+</opencv_storage>

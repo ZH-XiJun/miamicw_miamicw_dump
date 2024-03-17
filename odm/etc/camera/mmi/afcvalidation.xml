@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- product 1 means Manhattan-->
+<!-- index < 3, means test time-->
+<!-- pos 1 means down, pos 2 means horizontal, pos 3 means up-->
+<HWA_AFCVALIDATION product="1">
+	<config index="0">
+		<Mode pos="1" m="0.35" n="0.5" rectWidth="160" rectHeight="160" distance="1000" minVcmMain="-40" maxVcmMain="40" minVcmSub="-40" maxVcmSub="40" />
+		<Mode pos="1" m="0.67" n="0.5" rectWidth="160" rectHeight="160" distance="300" minVcmMain="-40" maxVcmMain="40" minVcmSub="-40" maxVcmSub="40" />
+	</config>
+	<config index="1">
+		<Mode pos="2" m="0.35" n="0.5" rectWidth="160" rectHeight="160" distance="500" minVcmMain="-40" maxVcmMain="40" minVcmSub="-40" maxVcmSub="40" />
+		<Mode pos="2" m="0.69" n="0.5" rectWidth="216" rectHeight="216" distance="300" minVcmMain="-40" maxVcmMain="40" minVcmSub="-40" maxVcmSub="40" />
+	</config>
+	<config index="2">
+		<Mode pos="3" m="0.40" n="0.5" rectWidth="160" rectHeight="160" distance="300" minVcmMain="-40" maxVcmMain="40" minVcmSub="-40" maxVcmSub="40" />
+		<Mode pos="3" m="0.67" n="0.5" rectWidth="160" rectHeight="160" distance="500" minVcmMain="-40" maxVcmMain="40" minVcmSub="-40" maxVcmSub="40" />
+	</config>
+</HWA_AFCVALIDATION>

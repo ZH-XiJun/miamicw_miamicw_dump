@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Config>
+    <Global>
+        <contractAdjust_flag>1</contractAdjust_flag> <!--0:关闭对比度调整,1: 开启对比度调整 -->
+        <colorAdjust_flag>1</colorAdjust_flag><!--0:关闭颜色调整,1:开启颜色调整 -->
+        <lumaAdjust_flag>1</lumaAdjust_flag><!--0:关闭亮度调整,1:开启亮度调整 -->
+    </Global>
+    <ColorAdjust>
+        <contract_param>14</contract_param><!-- [0, 20], 对比度参数 越大 对比度增强越大 -->
+        <color_adj_ratio>1.25</color_adj_ratio><!-- [1.0, 1.6], 饱和度参数 越大 饱和度越高 -->
+    </ColorAdjust>
+    <LumaAdjust>
+        <luma_adjust_gain>-4</luma_adjust_gain><!-- [-20, 20]: 亮度调整参数，小于0，则变暗， 大于0则变亮-->
+    </LumaAdjust>
+</Config>

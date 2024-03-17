@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Config>
+    <MasterBasicParam>
+        <GyroXPolarity>1</GyroXPolarity>
+        <GyroYPolarity>1</GyroYPolarity>
+        <ModuleOrientation>1</ModuleOrientation>
+        <Efl>3.95</Efl>
+        <PixPitch>1.25</PixPitch>
+        <MaxCompDegree>0.7</MaxCompDegree>
+        <GyroSampleInterval>10</GyroSampleInterval>
+        <GyroConvCoef>131.0</GyroConvCoef>
+    </MasterBasicParam>
+    <SlaveBasicParam>
+        <GyroXPolarity>1</GyroXPolarity>
+        <GyroYPolarity>1</GyroYPolarity>
+        <ModuleOrientation>1</ModuleOrientation>
+        <Efl>3.95</Efl>
+        <PixPitch>1.0</PixPitch>
+        <MaxCompDegree>0.7</MaxCompDegree>
+        <GyroSampleInterval>10</GyroSampleInterval>
+        <GyroConvCoef>131.0</GyroConvCoef>
+    </SlaveBasicParam>
+</Config>

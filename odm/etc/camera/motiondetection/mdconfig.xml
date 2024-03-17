@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gb2312"?>
+<MDAlgoConfig>
+    <!--HighSpeed2MidSpeed2LowSpeed Threshold in Raw Domain-->
+    <h2mRawThrd>1500</h2mRawThrd>
+    <m2lRawThrd>600</m2lRawThrd>
+    <!--Scene Unmoiton2Motion Numb/Moiton2Unmotion Numb-->
+    <u2mNumStable>1</u2mNumStable>
+    <m2uNumStable>3</m2uNumStable>
+    <u2mNumShaking>6</u2mNumShaking>
+    <m2uNumShaking>1</m2uNumShaking>
+    <!--Anti Motion Banding Thrd-->
+    <mBandingStTh>2</mBandingStTh>
+    <mBandingRlTh>100</mBandingRlTh>
+</MDAlgoConfig>

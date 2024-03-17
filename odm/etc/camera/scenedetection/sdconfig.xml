@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="GB2312"?>
+<SDAlgoConfig>
+	<AlgoControl>
+        <Algo name="aisd" switcher="0" ></Algo>
+        <sdvideo name="sdvideo" switcher="0" ></sdvideo>
+        <stableFrame name="stableFrame" switcher="30" ></stableFrame>
+        <unstableFrame name="unstableFrame" switcher="30" ></unstableFrame>
+	</AlgoControl>
+	<FilterStrategy>
+		<!-- SD_INVALID -->
+		<Scene0>
+			<index>0</index>
+			<enable>0</enable>
+			<inConfThd>0</inConfThd>
+			<outConfThd>0</outConfThd>
+			<inLVThd>0</inLVThd> 
+			<outLVThd>0</outLVThd>
+		</Scene0>
+		<!-- SD_BEACH: LV�жϸ�����Ҫ��inLVThd����outLVThd -->
+		<Scene1>
+			<index>1</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>110</inLVThd> 
+			<outLVThd>90</outLVThd>
+		</Scene1>
+		<!-- SD_BLUESKY: LV�жϸ�����Ҫ��inLVThd����outLVThd -->
+		<Scene2>
+			<index>2</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>110</inLVThd> 
+			<outLVThd>90</outLVThd>
+		</Scene2>
+		<!-- SD_SUNSET: LV not use -->
+		<Scene3>
+			<index>3</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd> 
+			<outLVThd>0</outLVThd>
+		</Scene3>
+		<!-- SD_FOOD: LV not use -->
+		<Scene4>
+			<index>4</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd> 
+			<outLVThd>0</outLVThd>
+		</Scene4>
+		<!-- SD_FLOWER -->
+		<Scene5>
+			<index>5</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>10</inLVThd> 
+			<outLVThd>0</outLVThd>
+		</Scene5>
+		<!-- SD_GREENPLANT -->
+		<Scene6>
+			<index>6</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>500</outConfThd>
+			<inLVThd>10</inLVThd> 
+			<outLVThd>0</outLVThd>
+		</Scene6>
+		<!-- SD_SNOW: LV�жϸ�����Ҫ��inLVThd����outLVThd,����Ϊ0 -->
+		<Scene7>
+			<index>7</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>70</inLVThd> 
+			<outLVThd>60</outLVThd>
+		</Scene7>
+		<!-- SD_NIGHT: LV�жϵ�����Ҫ��inLVThd <= outLVThd����Ϊ0�����ѽ���˳���?-->
+		<Scene8>
+			<index>8</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>80</inLVThd>
+			<outLVThd>90</outLVThd>
+		</Scene8>
+		<!-- SD_TEXT: LV not use -->
+		<Scene9>
+			<index>9</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd> 
+			<outLVThd>0</outLVThd>
+		</Scene9>
+		<!-- SD_STAGE: LV�жϵ�����Ҫ��inLVThd <= outLVThd����Ϊ0�����ѽ���˳���?-->
+		<Scene10>
+			<index>10</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>80</inLVThd>
+			<outLVThd>90</outLVThd>
+		</Scene10>
+		<!-- SD_CAT: LV not use -->
+		<Scene11>
+			<index>11</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd> 
+			<outLVThd>0</outLVThd>
+		</Scene11>
+		<!-- SD_DOG: LV not use -->
+		<Scene12>
+			<index>12</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd>
+			<outLVThd>0</outLVThd>
+		</Scene12>
+		<!-- SD_FIREWORKS -->
+		<Scene13>
+			<index>13</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>80</inLVThd>
+			<outLVThd>90</outLVThd>
+		</Scene13>
+		<!-- SD_OVERCAST -->
+		<Scene14>
+			<index>14</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>110</inLVThd>
+			<outLVThd>90</outLVThd>
+		</Scene14>
+		<!-- SD_FALLEN -->
+		<Scene15>
+			<index>15</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>10</inLVThd>
+			<outLVThd>0</outLVThd>
+		</Scene15>
+		<!-- SD_PANDA: LV not use -->
+		<Scene16>
+			<index>16</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd>
+			<outLVThd>0</outLVThd>
+		</Scene16>
+		<!-- SD_CAR: LV not use -->
+		<Scene17>
+			<index>17</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd>
+			<outLVThd>0</outLVThd>
+		</Scene17>
+		<!-- SD_OLDBUILDINGS: LV not use -->
+		<Scene18>
+			<index>18</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd>
+			<outLVThd>0</outLVThd>
+		</Scene18>
+		<!-- SD_BICYCLE: LV not use -->
+		<Scene19>
+			<index>19</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>0</inLVThd>
+			<outLVThd>0</outLVThd>
+		</Scene19> 
+		<!-- SD_WATERFALL -->
+		<Scene20>
+			<index>20</index>
+			<enable>1</enable>
+			<inConfThd>950</inConfThd>
+			<outConfThd>700</outConfThd>
+			<inLVThd>70</inLVThd>
+			<outLVThd>60</outLVThd>
+		</Scene20> 
+	</FilterStrategy>
+</SDAlgoConfig>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312"?>
+<HWA_HALL_CODE_CALIB>
+    <Mode index="0" x_pos="0.0" y_pos="0.0" />
+    <Mode index="1" x_pos="0.0" y_pos="1.0" />
+    <Mode index="2" x_pos="0.0" y_pos="-1.0" />
+    <Mode index="3" x_pos="1.0" y_pos="0.0" />
+    <Mode index="4" x_pos="-1.0" y_pos="0.0" />
+    <Mode index="5" x_pos="0.707"  y_pos="0.707" />
+    <Mode index="6" x_pos="0.707"  y_pos="-0.707" />
+    <Mode index="7" x_pos="-0.707"  y_pos="0.707" />
+    <Mode index="8" x_pos="-0.707" y_pos="-0.707" />
+    <Mode index="9" x_pos="0.2" y_pos="0.2" />
+</HWA_HALL_CODE_CALIB>
+

@@ -1,0 +1,33 @@
+on early-init
+
+on init
+
+on early-fs
+
+on fs
+
+on post-fs
+
+on post-fs-data
+
+on early-boot
+
+on early-boot
+
+on boot
+
+#camera
+    chown system system /sys/class/camerafs/node/rear_frequency_node
+    chmod 0660 /sys/class/camerafs/node/rear_frequency_node
+    chown system system /sys/class/camerafs/node/fore_frequency_node
+    chmod 0660 /sys/class/camerafs/node/fore_frequency_node
+
+# Service add below.
+service CameraDaemon /vendor/bin/CameraDaemon miamicw MIAMICW
+    class main
+    user media
+    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm system dsm
+    ioprio rt 4
+    capabilities SYS_NICE
+    writepid /dev/cpuset/top-app/tasks /dev/stune/top-app/tasks
+

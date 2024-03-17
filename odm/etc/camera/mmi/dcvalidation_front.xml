@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GB2312"?>
+<HWA_DCVALIDATION>
+    <Mode afcValid="0" depthValid="1" m1="0.3437500" n1="0.32" m2="0.30" n2="0.54166666" rectWidth="160" rectHeight="160" distance="300" minDistance="255" maxDistance="345" minVcm="-50" maxVcm="50" />
+    <Mode afcValid="0" depthValid="1" m1="0.3437500" n1="0.32" m2="0.70" n2="0.54166666" rectWidth="160" rectHeight="160" distance="500" minDistance="425" maxDistance="575" minVcm="-50" maxVcm="50" />
+    <!--like barca need 8M as main and 12M as aux when the primary big apture usecase-->
+    <Settings needSwapLeftRight="0" />
+</HWA_DCVALIDATION>
