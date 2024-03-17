@@ -1,0 +1,7 @@
+@reg&mem test info
+PARA_VERSION=Hi1103V100;
+PARA_WRITEM=2,0x50000094,1;
+ADDR_FILE_FILES=1,0x00040000,/vendor/firmware/hi1103/pilot/PRO_ITCM.bin;
+ADDR_FILE_FILES=1,0x2001a800,/vendor/firmware/hi1103/pilot/PRO_DTCM.bin;
+QUIT;
+@device_version=20181027105357

@@ -1,0 +1,8 @@
+@reg&mem test info
+PARA_VERSION=Hi1103V100;
+PARA_WRITEM=2,0x50000094,1;
+ADDR_FILE_FILES=1,0x80040000,/vendor/firmware/hi1103/pilot/PRO_BITCM.bin;
+ADDR_FILE_FILES=1,0x80215800,/vendor/firmware/hi1103/pilot/PRO_BDTCM.bin;
+@clear bfgx wait
+PARA_WRITEM=2,0x50000e04,0;
+@QUIT;

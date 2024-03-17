@@ -1,0 +1,9 @@
+@WiFi patch info
+PARA_VERSION=Hi1102AV100;
+ADDR_FILE_FILES=1,0x0,/vendor/firmware/hi1102a/pilot/WL_ITCM.bin;
+ADDR_FILE_FILES=1,0x70000,/vendor/firmware/hi1102a/pilot/WCPU_RAM.bin;
+ADDR_FILE_FILES=1,0x20000000,/vendor/firmware/hi1102a/pilot/WCPU_DTCM.bin;
+PARA_CALI_DCXO_DATA=0x99fc0;
+PARA_WRITEM=2,0x50002200,0xdf00;
+QUIT;
+@device_version=20191230101044

@@ -1,0 +1,43 @@
+
+service oam_hisi /vendor/bin/oam_hisi
+    class main
+    user system
+    group system root wifi bluetooth
+    disabled
+    oneshot
+
+service gnss_engine /vendor/bin/gnss_engine_hisi -factory
+    class main
+    user system
+    group system inet root
+    disabled
+
+service agnsscontrol /vendor/bin/gnss_control_hisi -factory
+    class main
+    user system
+    group system inet root
+    disabled
+
+service octty /vendor/bin/octty
+    class core
+    user system
+    group system bluetooth root media
+    disabled
+    shutdown critical
+
+service hisi_bfg_rec /vendor/bin/start_connectivity_hisi recovery
+    class server
+    user root
+    group system wifi
+    oneshot
+
+on property:vendor.setup_hi110x_modules=success
+    start octty
+    write /dev/kmsg "octty has started    "
+    start agnsscontrol
+    write /dev/kmsg "agnsscontrol has started"
+
+on property:vold.post_fs_data_done=1 && property:vendor.setup_hi110x_modules=success && property:ro.runmode=factory
+    start oam_hisi
+    write /dev/kmsg "oam_hisi has started    "
+

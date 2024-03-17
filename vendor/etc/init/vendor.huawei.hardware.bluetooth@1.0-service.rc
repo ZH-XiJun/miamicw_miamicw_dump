@@ -1,0 +1,6 @@
+service vendor.bluetooth_ext_service-1-0 /vendor/bin/hw/vendor.huawei.hardware.bluetooth@1.0-service
+    class hal
+    capabilities BLOCK_SUSPEND NET_ADMIN SYS_NICE
+    user bluetooth
+    group bluetooth
+    writepid /dev/blkio/foreground/tasks /dev/stune/foreground/tasks

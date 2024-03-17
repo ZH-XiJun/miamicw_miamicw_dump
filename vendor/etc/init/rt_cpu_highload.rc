@@ -1,0 +1,6 @@
+service rt_cpu_highload_service /vendor/bin/hw/rt_cpu_highload_service
+    class hal
+    user system
+    disabled
+    group system wifi dhcp inet net_raw net_admin media_rw
+    seclabel u:r:hal_hwfactoryinterface_default:s0

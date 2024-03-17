@@ -1,0 +1,3 @@
+libOpenCL.so
+libai_client.so
+libswing_client.so

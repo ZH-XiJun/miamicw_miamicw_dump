@@ -1,0 +1,6 @@
+@reg&mem test info
+PARA_VERSION=Hi1102AV100;
+ADDR_FILE_FILES=1,0x70000,/vendor/firmware/hi1102a/pilot/PRO_WRAM.bin;
+PARA_JUMP=0x00070001;
+@QUIT;
+@device_version=20191230101051

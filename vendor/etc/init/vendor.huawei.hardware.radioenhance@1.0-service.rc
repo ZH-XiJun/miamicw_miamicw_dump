@@ -1,0 +1,6 @@
+service radioenhance-hal-1-0 /vendor/bin/hw/vendor.huawei.hardware.radioenhance@1.0-service
+    interface vendor.huawei.hardware.radioenhance@1.0::IRadioenhance default
+    class hal
+    user root
+    group system
+    seclabel u:r:hal_radioenhance_default:s0

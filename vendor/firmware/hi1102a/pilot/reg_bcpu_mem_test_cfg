@@ -1,0 +1,8 @@
+@reg&mem test info
+PARA_VERSION=Hi1102AV100;
+PARA_WRITEM=2,0x50000094,1;
+ADDR_FILE_FILES=1,0x4A050000,/vendor/firmware/hi1102a/pilot/PRO_VECTORS.bin;
+ADDR_FILE_FILES=1,0x4B005800,/vendor/firmware/hi1102a/pilot/PRO_RAM_VECTOR.bin;
+@clear bfgx wait
+PARA_WRITEM=2,0x50000e04,0;
+@QUIT;

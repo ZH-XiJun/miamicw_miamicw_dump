@@ -1,0 +1,122 @@
+# Cloned from bcm94345wlpagb_p2xx.txt 
+#######################################################################################
+# NVRAM file for BCM43455/Huawei, Dual Band,  
+
+
+#1.固定的一些ID设定,不要动,请咨询Broadcom
+NVRAMRev=$Rev: 498373 $
+sromrev=11
+vendid=0x14e4
+devid=0x43ab
+manfid=0x2d0
+prodid=0x06e4
+nocrc=1
+boardtype=0x6e4
+boardrev=0x1304
+
+#2.
+# 晶体频率和国家码/区域码/RSSI校正, 请华为软件/射频人员自行调整
+# mac地址以HOST配置进来的优先
+xtalfreq=37400
+xtal_swcapio=0x9966
+macaddr=00:90:4c:c5:12:38
+ccode=CN
+regrev=38
+rssicorrnorm_c0=-2,-2
+rssicorrnorm5g_c0=-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2
+
+#3. boardflags, 请咨询Broadcom
+boardflags=0x00080001
+boardflags2=0x40000000
+boardflags3=0x48200100
+
+#4. 固定的设定,不要动,请咨询Broadcom
+phycal_tempdelta=15
+rxchain=1
+txchain=1
+aa2g=1
+aa5g=1
+tssipos5g=1
+tssipos2g=1
+femctrl=0
+AvVmid_c0=0,157,1,126,1,126,1,126,1,126
+
+#5. pa校准参数和功率上限,每个项目不一样,RF工程师决定
+pa2ga0=-183,5875,-687
+pa2ga1=-35,4475,-535
+pa5ga0=-145,5881,-655,-150,5897,-663,-147,5796,-656,-164,5679,-665
+pa5ga1=-132,3597,-492,-112,3522,-480,-120,3561,-484,-111,3504,-477
+
+#6. 固定的设定,不要动,请咨询Broadcom
+itrsw=1
+pdoffset2g40ma0=10
+pdoffset40ma0=0xaaaa
+pdoffset80ma0=0xaaaa
+extpagain5g=2
+extpagain2g=2
+lowpowerrange2g=0
+lowpowerrange5g=0
+tworangetssi2g=1
+tworangetssi5g=1
+fdss_level_2g=2,2
+#pacalpwr2g=11
+cbfilttype=0
+pacalindex2g=65
+cckdigfilttype=5
+pdoffsetcckma0=0x0
+#cckpwroffset0=-2
+
+#7. 2g目标功率设定,每个项目不一样,RF工程师决定
+maxp2ga0=76
+ofdmlrbw202gpo=0x0033
+dot11agofdmhrbw202gpo=0x7777
+mcsbw202gpo=0x33777773
+mcsbw402gpo=0x88776666
+
+#8. 5g目标功率设定,每个项目不一样,RF工程师决定
+maxp5ga0=74,74,74,74
+mcslr5glpo=0x0000
+mcsbw205glpo=0x6a888880
+mcsbw205gmpo=0x6a888880
+mcsbw205ghpo=0x6a888880
+
+mcsbw405glpo=0xaaaaaaa8
+mcsbw405gmpo=0xaaaaaaa8
+mcsbw405ghpo=0xaaaaaaa8
+
+mcsbw805glpo=0xaaaaaaa8
+mcsbw805gmpo=0xaaaaaaa8
+mcsbw805ghpo=0xaaaaaaa8
+
+#9. 天线控制, 不要动,请咨询Broadcom
+swctrlmap_2g=0x00040004,0x00020002,0x00040004,0x010a02,0x1ff
+swctrlmap_5g=0x00100010,0x00200020,0x00200020,0x010a02,0x2f4
+swctrlmapext_5g=0x00000000,0x00000000,0x00000000,0x000000,0x000
+swctrlmapext_2g=0x00000000,0x00000000,0x00000000,0x000000,0x000
+
+#10. DFS的一些设定, 不要动,请咨询Broadcom
+vcodivmode=1
+deadman_to=481500000
+ed_thresh2g=-54
+ed_thresh5g=-54
+eu_edthresh2g=-54
+eu_edthresh5g=-54
+
+#11. OOB设定,软件工程师决定,0x1 for UART enable, 0x2 for GPIOs, 0x8 for JTAG, 0x10 for HW OOB
+#tempthresh：温控上阈值
+#temps_hysteresis：回差，下阈值=tempthresh - temps_hysteresis
+muxenab=0x10
+tempthresh=80
+temps_hysteresis=15
+#12. 调节信道之间信令功率平坦度
+powoffs2gtna0=3,3,2,3,2,3,3,2,2,3,4,4,6,0
+powoffs2gtna1=5,4,0,-2,-3,-1,-2,-3,-2,-2,-2,0,0,0
+
+#SAR Control
+dynamicsarctrl_2g=0x80A8
+dynamicsarctrl_5gb0=0x80A8
+dynamicsarctrl_5gb1=0x80A8
+dynamicsarctrl_5gb2=0x80A8
+dynamicsarctrl_5gb3=0x80A8
+
+
