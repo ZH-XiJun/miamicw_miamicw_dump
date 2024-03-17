@@ -1,0 +1,19 @@
+<zerohung>
+  <sections>
+    <section id="1" name="hungtask">1</section>
+    <section id="2" name="screenon">1,10</section>
+    <section id="3" name="screenoff">1,10</section>
+    <section id="5" name="lmkd">1,30000,20,60000,0</section>
+    <section id="6" name="IO">1,10000,5,60000</section>
+    <section id="7" name="CPU">1,700,300000,1</section>
+    <section id="9" name="TP">1</section>
+    <section id="12" name="service">1</section>
+    <section id="13" name="GPU">1,3,300</section>
+    <section id="14" name="transwin">1,10000</section>
+    <section id="15" name="focuswin">1,10000</section>
+    <section id="17" name="thread">1,300</section>
+    <section id="100" name="version">100</section>
+    <section id="101" name="enable">1</section>
+    <section id="102" name="threshold">60</section>
+  </sections>
+</zerohung>

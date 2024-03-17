@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- These are configurations that should exist only in kid watch devices. -->
+<config>
+    <allow-in-power-save package="com.huawei.wearable.ota" />
+    <allow-in-power-save package="com.huawei.kidwatch.commonsetting" />
+    <allow-in-power-save package="com.huawei.kidwatch.wearableservice" />
+    <allow-in-power-save package="com.huawei.kidwatch.childguard" />
+    <allow-in-power-save package="com.huawei.kidwatch.alarmclock" />
+    <allow-in-power-save package="com.huawei.kidwatch.locationservice" />
+    <allow-in-power-save package="com.huawei.kidwatch.kidchat" />
+    <allow-in-power-save package="com.huawei.kidwatch.watchwificontroller" />
+    <allow-in-power-save package="com.huawei.kidwatch.contacts" />
+    <allow-in-power-save package="com.huawei.kidwatch.betaclub" />
+    <allow-in-power-save package="com.baidu.map.location" />
+    <allow-in-power-save package="com.huawei.kidwatch.videochat" />
+    <allow-in-data-usage-save package="com.baidu.map.location" />
+    <!--START entries copied from vendor/huawei/prebuilt/etc/sysconfig/simba.xml-->
+
+    <allow-implicit-broadcast action="com.huawei.mms.transaction.QUERY_PHONE_PAY" />
+    <allow-implicit-broadcast action="com.huawei.mms.transaction.QUERY_DATA_PAY" />
+    <allow-implicit-broadcast action="com.huawei.wifisetting.action.SET_WIFI_PROFILE" />
+    <allow-implicit-broadcast action="com.huawei.watchsettings.action.UPGRADE_SYSTEM_COMMAND" />
+    <allow-implicit-broadcast action="com.huawei.watchsettings.action.FACTORY_RESET_COMMAND" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.action.UPLOAD_LOCATION" />
+    <allow-implicit-broadcast action="com.huawei.stepcounter.action.UPDATE_STEPCOUNTER" />
+    <allow-implicit-broadcast action="com.huawei.wearable.intent.action.COLLECT_LOGS" />
+    <allow-implicit-broadcast action="com.huawei.wearable.intent.action.NOTIFY_DELETE_FRIEND" />
+    <allow-implicit-broadcast action="com.huawei.wearable.intent.action.MODIFY_NICKNAME" />
+    <allow-implicit-broadcast action="com.huawei.wearable.intent.action.MODIFY_HEAD_ICON" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.systemui.LOW_POWER_MODE" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.watchface.WATCH_FACE_CHANGED" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.systemui.WATCH_MODE_CHANGED" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.ACTOIN_CONTACTS_PUSH" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.NOTIFY_CONTACTS_CHANGE" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.HWCONTACTS_GET_RANDOM_TIMESTAMP" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.SEND_SMS_FAILED" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.BIND_DONE" />
+    <allow-implicit-broadcast action="com.huawei.hwid.ACTION_HEAD_PIC_CHANGE" />
+    <allow-implicit-broadcast action="com.huawei.wearable.hwid.LOGIN_SUCCESS" />
+    <allow-implicit-broadcast action="com.huawei.android.push.intent.REGISTRATION" />
+    <allow-implicit-broadcast action="com.huawei.android.push.intent.RECEIVE" />
+    <allow-implicit-broadcast action="com.huawei.android.push.intent.CLICK" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.PUSH_STATE" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.ACCOUNT_SWITCHED" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.SHAKE_CONTACTS_SEND" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.SHAKE_CONTACTS_DATA" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.CONTACT_ADD_FRIEND" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.SET_FRIEND_HEADICON" />
+    <allow-implicit-broadcast action="com.huawei.security.action.SECURITY_MONITOR" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.commonsetting.ACTION_SETTINGS_CHANGE" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.commonsetting.action.MSG_PUSH" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.ACTION_CLASS_FORBIDDEN_STATUS" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.START_SOS_CALL" />
+    <allow-implicit-broadcast action="com.huawei.kidchat.autotest.send" />
+    <allow-implicit-broadcast action="com.huawei.kidchat.autotest.ack" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.NOTIFY_CONTACTS_CHANGE"/>
+    <allow-implicit-broadcast action="com.huawei.watchsettings.action.SET_LANGUAGE_EN" />
+    <allow-implicit-broadcast action="com.huawei.watchsettings.action.SET_PASSWORD_COMMAND" />
+    <allow-implicit-broadcast action="com.huawei.watchsettings.action.SET_LANGUAGE_CH" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.REMOVE_FRIEND" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.action.UPLOAD_WATCH_STATUS" />
+    <allow-implicit-broadcast action="android.intent.action.DATE_CHANGED" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.systemui.action.QS_EXPANDED" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.NOTIFY_CONTACTS_CHANGE_ON_BIND_DONE" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.THERMAL_PROTECTION_ACTION" />
+    <allow-implicit-broadcast action="android.intent.action.CLOSE_SYSTEM_DIALOGS" />
+    <allow-implicit-broadcast action="android.net.wifi.SCAN_RESULTS" />
+    <allow-implicit-broadcast action="com.huawei.action.SEND_SOS_PICTURE" />
+    <allow-implicit-broadcast action="android.net.wifi.STATE_CHANGE" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.alarmclock.action.STOP_ALARM" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.REGISTER_VOIP_DONE" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.NOTIFY_CONTACTS_CATEGORY" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.NOTIFY_CONTACTS_VOIP_CHANGE" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.PROTECTION_COUNTDOWN_IN_ACTION" />
+    <allow-implicit-broadcast action="com.android.server.telecom.intent.action.CALLS_ADD_ENTRY"  />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.action.DATA_CLEAR_ACTION" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.SETUP_WIZARD_DONE" />
+    <allow-implicit-broadcast action="com.huawei.kidwatch.action.REMOVE_AUTO_BOOT" />
+    <allow-implicit-broadcast action="com.huawei.intent.action.ADD_FRIEND_SWITCH_CHANGE" />
+
+</config>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?Declaration Don't modify the file manually,  its created automaticlly?>
+<Area>
+  <Region name="China" locale="zh-Hans-CN" code="156" mcc="460" allowBaseType="1" allowBetaBaseType="3"/>
+  <Region name="United Kingdom" locale="en-GB" code="826" mcc="234" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Ireland" locale="en-IE" code="372" mcc="272" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Italy" locale="ca-IT" code="380" mcc="222" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Spain" locale="ca-ES" code="724" mcc="214" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Germany" locale="de-DE" code="276" mcc="262" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Netherlands" locale="en-NL" code="528" mcc="204" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="France" locale="ca-FR" code="250" mcc="208" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Belgium" locale="de-BE" code="056" mcc="206" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Poland" locale="pl-PL" code="616" mcc="260" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Greece" locale="el-GR" code="300" mcc="202" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Norway" locale="nb-NO" code="578" mcc="242" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Latvia" locale="lv-LV" code="428" mcc="247" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Estonia" locale="et-EE" code="233" mcc="248" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Denmark" locale="da-DK" code="208" mcc="238" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Finland" locale="en-FI" code="246" mcc="244" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Iceland" locale="is-IS" code="352" mcc="274" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Lithuania" locale="lt-LT" code="440" mcc="246" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Sweden" locale="en-SE" code="752" mcc="240" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Macedonia (FYROM)" locale="mk-MK" code="807" mcc="294" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Bulgaria" locale="bg-BG" code="100" mcc="284" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Cyprus" locale="el-CY" code="196" mcc="280" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Croatia" locale="hr-HR" code="191" mcc="219" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Slovenia" locale="en-SI" code="705" mcc="293" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Romania" locale="ro-RO" code="642" mcc="226" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Moldova" locale="ro-MD" code="498" mcc="259" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Austria" locale="de-AT" code="040" mcc="232" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Czech Republic" locale="cs-CZ" code="203" mcc="230" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Serbia" locale="sr-Latn-RS" code="688" mcc="220" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Bosnia &amp; Herzegovina" locale="bs-Latn-BA" code="070" mcc="218" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Montenegro" locale="sr-Latn-ME" code="499" mcc="297" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Albania" locale="sq-AL" code="008" mcc="296" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Colombia" locale="es-CO" code="170" mcc="732" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Costa Rica" locale="es-CR" code="188" mcc="712" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Chile" locale="es-CL" code="152" mcc="730" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Guatemala" locale="es-GT" code="320" mcc="704" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Mexico" locale="es-MX" code="484" mcc="334" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Venezuela" locale="es-VE" code="862" mcc="734" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Argentina" locale="es-AR" code="032" mcc="722" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Peru" locale="es-PE" code="604" mcc="716" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="India" locale="as-IN" code="356" mcc="404" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="United State" locale="en-US" code="840" mcc="310" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Vatican" code="336" mcc="225" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Andorra" locale="ca-AD" code="020" mcc="214" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Portugal" locale="pt-PT" code="620" mcc="268" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Switzerland" locale="de-CH" code="756" mcc="228" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Luxembourg" locale="de-LU" code="442" mcc="270" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="San Marino" locale="it-SM" code="674" mcc="292" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Monaco" locale="fr-MC" code="492" mcc="212" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Malta" locale="en-MT" code="470" mcc="278" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="GIBTEL" mcc="266" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Liechtenstein" locale="de-LI" code="438" mcc="295" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Hungary" locale="hu-HU" code="348" mcc="216" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Slovakia" locale="sk-SK" code="703" mcc="231" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Russia" locale="ru-RU" code="643" mcc="250" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Brazil" locale="pt-BR" code="076" mcc="724" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Iran" locale="fa-IR" code="364" mcc="432" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="United Arab Emirates" locale="ar-AE" code="784" mcc="412" allowBaseType="0" allowBetaBaseType="2"/>
+  <Region name="Saudi Arabia" locale="ar-SA" code="682" mcc="420" allowBaseType="0" allowBetaBaseType="2"/>
+</Area>

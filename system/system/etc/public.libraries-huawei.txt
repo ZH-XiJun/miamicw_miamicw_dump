@@ -1,0 +1,2 @@
+libautotune.huawei.so
+libteec.huawei.so

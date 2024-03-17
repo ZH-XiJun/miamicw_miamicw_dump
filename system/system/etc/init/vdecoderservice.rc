@@ -1,0 +1,4 @@
+service vdecoderservice /system/bin/vdecoderservice
+    class core
+    user  system
+    group system

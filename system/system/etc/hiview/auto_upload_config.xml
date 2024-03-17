@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?Declaration Don't modify the file manually,  its created automaticlly?>
+<AutoUpload>
+  <Template name="TPL_APP_BASE_LOG_SIMPLE">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="applogcat-log((?!F\.tar\.gz).)*" option="latest=1"/>
+  </Template>
+  <Template name="TPL_KMSG_BASE_LOG_SIMPLE">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="kmsgcat-log((?!F\.tar\.gz).)*" option="latest=1"/>
+  </Template>
+  <Template name="TPL_RIL_BASE_LOG_SIMPLE">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="radiologcat-log((?!F\.tar\.gz).)*" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="rillogcat-log((?!F\.tar\.gz).)*" option="latest=1"/>
+  </Template>
+  <Template name="TPL_APP_BASE_LOG">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="applogcat-log((?!F\.tar\.gz).)*" option="latest=2"/>
+  </Template>
+  <Template name="TPL_APP_BASE_LOG_EARLIER">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="applogcat-log((?!F\.tar\.gz).)*" option="latest=4"/>
+  </Template>
+  <Template name="TPL_APP_BASE_LOG_HUNG">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="applogcat-log((?!F\.tar\.gz).)*" extrakey="LOGTYPE:(1|3)" option="latest=4"/>
+  </Template>
+  <Template name="TPL_KMSG_BASE_LOG_HUNG">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="kmsgcat-log((?!F\.tar\.gz).)*" extrakey="LOGTYPE:(2|3)" option="latest=3"/>
+  </Template>
+  <Template name="TPL_KMSG_BASE_LOG">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="kmsgcat-log((?!F\.tar\.gz).)*" option="latest=2"/>
+  </Template>
+  <Template name="TPL_RIL_BASE_LOG">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="radiologcat-log((?!F\.tar\.gz).)*" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="rillogcat-log((?!F\.tar\.gz).)*" option="latest=2"/>
+  </Template>
+  <Template name="TPL_CHARGE_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="charge-log((?!F\.tar\.gz).)*" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/charge-log/" pattern="charge-log((?!F\.tar\.gz).)*" option="latest=1"/>
+  </Template>
+  <Template name="TPL_SENSORHUB_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sensorhub-log/sensorhub-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/sdcard/log/sensorhub-log/sensorhub-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sensorhub-log/ShLogImage.bin"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/sdcard/log/sensorhub-log/ShLogImage.bin"/>
+  </Template>
+  <Template name="TPL_INPUT_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/input-log/input-log"/>
+  </Template>
+  <Template name="TPL_LOGCAT_BASE_CMD">
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="logcat -b main -b system -v threadtime -t 4096" output="log_main"/>
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="logcat -b events -v threadtime -t 4096" output="log_events"/>
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="logcat -b radio -v threadtime -t 4096" output="log_radio"/>
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="dmesg" output="log_kmsg"/>
+  </Template>
+  <Template name="TPL_LOGCAT_BASE_SIMPLE_CMD">
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="logcat -b events -v threadtime -t 4096" output="log_events"/>
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="logcat -b radio -v threadtime -t 4096" output="log_radio"/>
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="dmesg" output="log_kmsg"/>
+  </Template>
+  <Template name="TPL_LOGCAT_APP_CMD">
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="logcat -b main -b system -v threadtime -t 4096" output="log_main"/>
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="logcat -b events -v threadtime -t 4096" output="log_events"/>
+  </Template>
+  <Template name="TPL_MINIBUGREPORT_CMD">
+    <CMD faultlevel="GENERAL" privacylevel="PROTECTED" run="dumpstate -m -v" output="mini_bugreport.txt"/>
+  </Template>
+  <Template name="TPL_PERFORMANCE_BASE_LOG">
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/jank/log/.+.log" option="delete"/>
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/jank/log/systrace\d?.sys" option="delete"/>
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/jank/iotrace/iotrace(.*)" option="delete"/>
+  </Template>
+  <Template name="TPL_PERFORMANCE_APP_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="applogcat-log((?!F\.tar\.gz).)*" extrakey="RESULT:(2|3)" option="latest=2"/>
+  </Template>
+  <Template name="TPL_PERFORMANCE_BASE_CMD">
+    <CMD faultlevel="INFORMATIVE" privacylevel="SENSITIVE" run="logcat -b main -b system -v threadtime -t 4096" output="log_main"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="SENSITIVE" run="logcat -b events -v threadtime -t 4096" output="log_events"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="logcat -b jank -v threadtime -t 4096" output="log_jank"/>
+  </Template>
+  <Template name="TPL_POWER_THERMAL_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/ptm/log/boost_stats.txt" option="delete"/>
+  </Template>
+  <Template name="TPL_MODEM_BASE_LOG">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/sdcard/log/modem/balonglte/" pattern="LOG_\d+_\d{14}_\d+.lpd" extrakey="FAULTCLASSIFICATION:2" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/sdcard/log/modem/viacbp82d/" pattern="via\d{1,3}.modemlog.trx.bin" extrakey="FAULTCLASSIFICATION:2" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/sdcard/log/modem/" pattern=".+.qdb" extrakey="FAULTCLASSIFICATION:2" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/mdm_dbg.txt" extrakey="FAULTCLASSIFICATION:(1|2|4)"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/VIA_modem_track.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/hsaconfig.ini" extrakey="FAULTCLASSIFICATION:(1|2|4)"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/history.log" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/storage/emulated/0/log/modem/balonglte/(.+)\.lpd"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/storage/sdcard1/log/modem/balonglte/(.+)\.lpd"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/storage/emulated/0/log/QcomChrModem/diag_log_.*.lzf"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/storage/sdcard1/log/QcomChrModem/diag_log_.*.lzf"/>
+  </Template>
+  <Template name="TPL_MODEM_COM_BASE_LOG">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/data/log/cp_log/modemlog/" pattern="modemkmsg-log(.*)" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/log/" pattern="modemkmsg-log(.*)" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+  </Template>
+  <Template name="TPL_MODEM_SIM_DRV_BASE_LOG">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim0/" pattern="usimmerrlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim0/" pattern="usimminitlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim0/" pattern="UsimmErrLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim0/" pattern="UsimmInitLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim1/" pattern="usimmerrlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim1/" pattern="usimminitlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim1/" pattern="UsimmErrLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim1/" pattern="UsimmInitLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim2/" pattern="usimmerrlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim2/" pattern="usimminitlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim2/" pattern="UsimmErrLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/DrvLog/Sim2/" pattern="UsimmInitLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim0/" pattern="usimmerrlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim0/" pattern="usimminitlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim0/" pattern="UsimmErrLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim0/" pattern="UsimmInitLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim1/" pattern="usimmerrlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim1/" pattern="usimminitlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim1/" pattern="UsimmErrLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim1/" pattern="UsimmInitLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim2/" pattern="usimmerrlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim2/" pattern="usimminitlogctrl.bin" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim2/" pattern="UsimmErrLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/PAM/Sim2/" pattern="UsimmInitLog_\d{1}" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/drv/sci/" pattern="sci0_log_list_file.txt" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/drv/sci/" pattern="sci1_log_list_file.txt" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/modem_log/drv/sci/" pattern="sci\d{1}_index(.*).txt" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=6"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/modem_log/drv/sci/task_name.log" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+  </Template>
+  <Template name="TPL_MODEM_HIFI_BASE_LOG">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="cat /proc/hifidebug/dspdumplog" output="dspdumplog.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/hifi_log/hifi.bin" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/hifi_log/hifi.log" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="cat /proc/audio/hi64xxdump" output="hi64xxdump.txt"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="cat /sys/kernel/debug/hi6402/dump" output="hi6402dump.txt"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="cat /sys/kernel/debug/hi6402/rh" output="hi6402history.txt"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="cat /sys/kernel/debug/hi6555c/rr" output="hi65xxcdump.txt"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="cat /sys/kernel/debug/hi6555c/rh" output="hi65xxchistory.txt"/>
+  </Template>
+  <Template name="TPL_VT_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/hme/hme_v_log_all.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/hme/hme_v_log_api.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/hme/hme_v_log_error.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/hme/hme_v_log_io.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/hme/hme_v_log_trace.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/sdcard/Android/data/com.huawei.ims/files/hme_v_log_all.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/sdcard/Android/data/com.huawei.ims/files/hme_v_log_api.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/sdcard/Android/data/com.huawei.ims/files/hme_v_log_error.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/sdcard/Android/data/com.huawei.ims/files/hme_v_log_io.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/sdcard/Android/data/com.huawei.ims/files/hme_v_log_trace.txt" extrakey="FAULTCLASSIFICATION:(1|2)"/>
+  </Template>
+  <Template name="TPL_RELIABILITY_COMMERCIAL_HISI_LOG">
+    <Path faultlevel="CRITICAL" privacylevel="PUBLIC" path="/data/hisi_logs/history.log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/ap_log/last_kmsg"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/ap_log/dmesg-ramoops-0"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/ap_log/fastboot_log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/ap_log/last_fastboot_log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/ap_log/bl31_mntn_memory.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/bbox_lpm3.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/bbox_split_bin/LPM3"/>
+  </Template>
+  <Template name="TPL_RELIABILITY_COMMERCIAL_SENSORHUB_LOG">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/bbox_sensorhub.bin"/>
+  </Template>
+  <Template name="TPL_RELIABILITY_COMMERCIAL_HIFI_LOG">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/sochifi_logs/hifi_ddr.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/codechifi_logs/codec_ocram.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/codechifi_logs/codec_reg.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/codechifi_logs/codec_log.bin"/>
+  </Template>
+  <Template name="TPL_RELIABILITY_BETA_HISI_CRASH_LOG">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/pmu.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/teeos_logs/teeOS_log-1"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/teeos_logs/last_teemsg"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/teeos_logs/teeOS_log-1"/>
+  </Template>
+  <Template name="TPL_RELIABILITY_BETA_HIFI_CRASH_LOG">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/hifi_log/hifi.log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/hifi_log/hifi.bin"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/hi\d{1,9}dump/\d{14}-\d{8}/codec_ocram.bin"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/hi\d{1,9}dump/\d{14}-\d{8}/codec_tcm.bin"/>
+  </Template>
+  <Template name="TPL_DMD_BASE_LOG">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/data/log/dmd_log/" pattern="dmd_record_\d?.txt" option="latest=1"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/data/log/dmd_log/dmd_commercial_record.txt" option="delete"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/splash2/dmd_log/dmd_commercial_record.txt" option="delete"/>
+  </Template>
+  <Template name="TPL_AUDIO_ANC_BASE_LOG">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/codec_dsp/beta_club/anc_cs_info.log" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/codec_dsp/beta_club/anc_reg_coef.log" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/codec_dsp/beta_club/64xx_hifi.log" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/codec_dsp/beta_club/bsd_ed.log" option="delete"/>
+  </Template>
+  <Template name="TPL_AUDIO_ANC_VOICE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/anc_pcm_anti.data" option="delete"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/anc_pcm_ref.data" option="delete"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/anc_pcm_err.data" option="delete"/>
+  </Template>
+  <Template name="TPL_AUDIO_SMARTPA_BASE_LOG">
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/data/log/codec_dsp/beta_club/pa_om_info.log" option="delete"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/codec_dsp/beta_club/64xx_hifi.log" option="delete"/>
+  </Template>
+  <Template name="TPL_AUDIO_SMARTPA_VOICE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/pa1_i.data" option="delete"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/pa1_v.data" option="delete"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/pa2_i.data" option="delete"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/pa2_v.data" option="delete"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/pa_pcmin.data" option="delete"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="SECRET" path="/data/log/codec_dsp/beta_club/pa_pcmout.data" option="delete"/>
+  </Template>
+  <Template name="TPL_INOTIFY_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="SENSITIVE" path="/log/inotify.log" option="delete"/>
+  </Template>
+  <Template name="TPL_TENCENT_MM_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/sdcard/tencent/Micromsg/xlog/" pattern="MM_\d{8}.xlog" extrakey="PNAME:com.tencent.mm" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/sdcard/tencent/Micromsg/xlog/" pattern="PUSH_\d{8}.xlog" extrakey="PNAME:com.tencent.mm" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/sdcard/tencent/Micromsg/xlog/" pattern="SANDBOX_\d{8}.xlog" extrakey="PNAME:com.tencent.mm" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/sdcard/tencent/Micromsg/xlog/" pattern="TOOL_\d{8}.xlog" extrakey="PNAME:com.tencent.mm" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/sdcard/tencent/Micromsg/crash/" pattern="crash_\d{8}.txt" extrakey="PNAME:com.tencent.mm" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/sdcard/tencent/MicroMsg/xlog/" pattern="EXDEVICE_\d{8}.xlog" extrakey="PNAME:com.tencent.mm" option="latest=1"/>
+  </Template>
+  <Template name="TPL_ATT_TEST_CASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/AutoTest/AutoTest.txt"/>
+  </Template>
+  <Template name="TPL_RELIABILITY_BBOX_LOG">
+    <DynamicPath faultlevel="GENERAL" privacylevel="SENSITIVE" pattern="/data/hisi_logs/\d{14}-\d{8}/bbox.bin"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="SENSITIVE" pattern="/data/hisi_logs/\d{14}-\d{8}/bbox_aft.bin"/>
+  </Template>
+  <Template name="TPL_ISP_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/isp-log/isp-log"/>
+  </Template>
+  <Template name="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/sahara_memdump" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/sdcard_memdump" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/srecorder.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/reason_memdump" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/pon_stats"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/reset_stats"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/srecorder.kernelbuff" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/CODERAM.BIN" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/DATARAM.BIN" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/DDR_DATA.BIN" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_DICT.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_DRAM.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_HRAM.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_IRAM.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_REG1.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_REG2.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_REG3.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_SRAM.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/IPA_MBOX.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/MSGRAM.BIN" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/OCIMEM.BIN" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/PMIC_PON.BIN" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/PMIC_RTC.BIN" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/prelog.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/RST_STAT.BIN" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/tz.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/task_trace.bin" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/minidump_current/irq_trace.bin" option="delete"/>
+  </Template>
+  <Template name="TPL_RELIABILITY_FAULTDETECT_RUN_LOG">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/dbox/dumptool.log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/reliability/faultdetect/dumptool.log"/>
+  </Template>
+  <Template name="TPL_DMD_MMC_CMD_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/dev/mmc_cmd"/>
+  </Template>
+  <Template name="TPL_FINGERPRINT_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/sec_storage_data/log/LOG@A32B3D00CB5711E39C1A0800200C9A66-0"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/sec_storage_data/log/LOG@FD1BBFB29A624B278FDBA503529076AF-0"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/qsee_log.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/tz_boot.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/tz_interrupt.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/tz_log_A.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/tz_vmid.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/qsee_log_A.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/tz_general.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/tz_log.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sec_log/tz_reset.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/teeos_logs/teeOS_log-1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/teeos_logs/last_teemsg"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/hisi_logs/teeos_logs/teeOS_log-1"/>
+  </Template>
+  <Template name="TPL_VR_BASE_LOG">
+    <Path faultlevel="CRITICAL" privacylevel="PROTECTED" path="/data/log/reliability/vr/last_kmsg" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/reliability/vr/dump.log" option="delete"/>
+  </Template>
+  <Template name="TPL_TPTHP_BASE_LOG">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/input-log/dmd.thplog"/>
+  </Template>
+  <Event id_min="901000000" id_max="901000000">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_server_crash@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_server_crash@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/system/dropbox/SYSTEM_LAST_KMSG@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/data/system/dropbox/SYSTEM_TOMBSTONE@\d{1,13}.txt.gz"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_INOTIFY_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000001" id_max="901000001">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_server_watchdog@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_server_watchdog@\d{1,13}.txt"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_INOTIFY_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000002" id_max="901000002">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/\d{14}/dumptoolinfo"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/faultdetect/feature_trace/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/console-ramoops-0"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/dmesg-ramoops-0"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/pmsg-ramoops-0"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/sbl1_lk/sbl1_\d{14}.log" option="delete"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/sbl1_lk/lk_\d{14}.log" option="delete"/>
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000003" id_max="901000003">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/faultdetect/feature_trace/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000004" id_max="901000004">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/faultdetect/feature_trace/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000005" id_max="901000005">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/faultdetect/feature_trace/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000006" id_max="901000007">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/faultdetect/feature_trace/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/console-ramoops-0"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/dmesg-ramoops-0"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/pmsg-ramoops-0"/>
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000008" id_max="901000008">
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/android_logs/qsee_log.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/android_logs/qsee_A_log.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/sec_storage_data/log/" pattern="LOG@.+" option="latest=2"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000009" id_max="901000009">
+    <DynamicPath faultlevel="GENERAL" privacylevel="SECRET" pattern="/data/ramdump/ramdump_modem_\d{4}-(0|1|2)\d-\d{2}_\d{2}-\d{2}-\d{2}.elf"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="SECRET" pattern="/data/ramdump/ramdump_smem_\d{4}-(0|1|2)\d-\d{2}_\d{2}-\d{2}-\d{2}.elf"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/history.log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/cp_log/modemlog/modemkmsg-log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/cp_log/modemlog/modemkmsg-log.1"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="SENSITIVE" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log.tar.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/cphy_ddr.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/lphy_dtcm.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/lphy_itcm.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_dts.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_dump.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_etb.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_secshared.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_share.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_sram.bin"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_ddr.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_etb1.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/phy_dump_pwron.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/phy_dump_pwroff.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/reset.log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/modem_log/drv/nv/NvLog.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/modem_log/drv/nv/nv_file.bin"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/apr/mcrash_flag"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/sdcard/log/modem/balonglte/" pattern="LOG_\d+_\d{14}_\d+.lpd" option="latest=2"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/data/log/modem_crash/modem_crash_log"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PUBLIC" path="/data/log/modem_crash/modem_exception"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/teeos_logs/teeOS_log-1"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901000010" id_max="901000010">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/dumptool/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/faultdetect/feature_trace/\d{14}/KernelCrash___\d{14}_Parsed_SRecorder.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/console-ramoops-0"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/dmesg-ramoops-0"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/sys/fs/pstore/pmsg-ramoops-0"/>
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901001000" id_max="901001000">
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_app_anr@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_app_anr@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PROTECTED" pattern="/data/system/dropbox/data_app_anr@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PROTECTED" pattern="/data/system/dropbox/data_app_anr@\d{1,13}.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/anr/traces.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/logcache/systrace.sys" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/logcache/dumpsys.txt" option="delete"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/isp-log/isp-log" extrakey="PNAME:com.huawei.camera"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_INOTIFY_BASE_LOG"/>
+    <Import template="TPL_TENCENT_MM_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901001001" id_max="901001001">
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_app_crash@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_app_crash@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PROTECTED" pattern="/data/system/dropbox/data_app_crash@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PROTECTED" pattern="/data/system/dropbox/data_app_crash@\d{1,13}.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/isp-log/isp-log" extrakey="PNAME:com.huawei.camera"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_INOTIFY_BASE_LOG"/>
+    <Import template="TPL_TENCENT_MM_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901001002" id_max="901001002">
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PUBLIC" pattern="/data/system/dropbox/SYSTEM_TOMBSTONE@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PUBLIC" pattern="/data/system/dropbox/SYSTEM_TOMBSTONE@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PROTECTED" pattern="/data/system/dropbox/data_app_native_crash@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PROTECTED" pattern="/data/system/dropbox/data_app_native_crash@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_app_native_crash@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PUBLIC" pattern="/data/system/dropbox/system_app_native_crash@\d{1,13}.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/isp-log/isp-log" extrakey="PNAME:com.huawei.camera"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_INOTIFY_BASE_LOG"/>
+    <Import template="TPL_TENCENT_MM_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002000" id_max="901002000">
+    <DynamicPath faultlevel="GENERAL" privacylevel="SECRET" pattern="/data/ramdump/ramdump_modem_\d{4}-(0|1|2)\d-\d{2}_\d{2}-\d{2}-\d{2}.elf"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="SECRET" pattern="/data/ramdump/ramdump_smem_\d{4}-(0|1|2)\d-\d{2}_\d{2}-\d{2}-\d{2}.elf"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/history.log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/cp_log/modemlog/modemkmsg-log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/cp_log/modemlog/modemkmsg-log.1"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="SENSITIVE" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log.tar.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/cphy_ddr.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/lphy_dtcm.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/lphy_itcm.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_dts.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_dump.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_etb.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_secshared.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_share.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_sram.bin"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_ddr.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/modem_etb1.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/phy_dump_pwron.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/phy_dump_pwroff.bin"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/hisi_logs/\d{14}-\d{8}/cp_log/reset.log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/modem_log/drv/nv/NvLog.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/modem_log/drv/nv/nv_file.bin"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/apr/mcrash_flag"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/sdcard/log/modem/balonglte/" pattern="LOG_\d+_\d{14}_\d+.lpd" option="latest=2"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/data/log/modem_crash/modem_crash_log"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PUBLIC" path="/data/log/modem_crash/modem_exception"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/hisi_logs/running_trace/teeos_logs/teeOS_log-1"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002001" id_max="901002001">
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_HIFI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HIFI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002002" id_max="901002002">
+    <Import template="TPL_SENSORHUB_BASE_LOG"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/sensorhub-log/history.log"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="SENSITIVE" pattern="/data/log/sensorhub-log/sensorhub-\d{2}.dmp"/>
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002003" id_max="901002003">
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/sec_storage_data/log/" pattern="LOG@.+" option="latest=2"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002103" id_max="901002103">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BETA_QCOM_CRASH_LOG"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" path="/log/tz_dump"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/android_logs/qsee_log.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/android_logs/qsee_A_log.txt"/>
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/sec_storage_data/log/" pattern="LOG@.+" option="latest=2"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002004" id_max="901002004">
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002005" id_max="901002005">
+    <DynamicPath faultlevel="GENERAL" privacylevel="SENSITIVE" pattern="/data/ramdump/ramdump_\d{4}-(0|1|2)\d-\d{2}_\d{2}-\d{2}-\d{2}.elf"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/apr/mcrash_flag"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002006" id_max="901002006">
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002007" id_max="901002007">
+    <Import template="TPL_RELIABILITY_BETA_HISI_CRASH_LOG"/>
+    <Import template="TPL_RELIABILITY_COMMERCIAL_HISI_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_RELIABILITY_BBOX_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002010" id_max="901002010">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901002030" id_max="901002031">
+    <Import template="TPL_VR_BASE_LOG"/>
+  </Event>
+  <Event id_min="901003000" id_max="901003000">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/golden_eye_logs/thread_limit/thread_limit.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/reliability/goldeneye/thread_limit/thread_limit.txt"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+  </Event>
+  <Event id_min="901003001" id_max="901003001">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/golden_eye_logs/fdlimit/fdlimit.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/reliability/goldeneye/fdlimit/fdlimit.txt"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+  </Event>
+  <Event id_min="901003002" id_max="901003002">
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/golden_eye_logs/appmemlimit/appmemlimit_(.*).gz"/>
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/golden_eye_logs/appmemlimit/.+-smaps"/>
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/reliability/goldeneye/appmemlimit/appmemlimit_(.*).gz"/>
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/reliability/goldeneye/appmemlimit/.+-smaps"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_BASE_CMD"/>
+    <Import template="TPL_ATT_TEST_CASE_LOG"/>
+  </Event>
+  <Event id_min="901003003" id_max="901003003">
+    <Path faultlevel="GENERAL" privacylevel="SENSITIVE" dir="/data/log/android_logs/" pattern="applogcat-log((?!F\.tar\.gz).)*" extrakey="PROCTYPE:0" option="latest=1"/>
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/golden_eye_logs/procmemstat/mem_stat_\d{14}.txt"/>
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/reliability/goldeneye/procmemstat/mem_stat_\d{14}.txt"/>
+  </Event>
+  <Event id_min="901003011" id_max="901003021">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="901003011" id_max="901003011">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys notification" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003012" id_max="901003012">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys activity broadcasts" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003013" id_max="901003013">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys activity broadcasts" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003014" id_max="901003014">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys alarm" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003015" id_max="901003015">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys appops" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003017" id_max="901003017">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/rms_log/threadinfo.txt"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/reliability/rms_log/threadinfo.txt"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="ps  -AT" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003018" id_max="901003018">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys activity providers" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003019" id_max="901003019">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys iostatsservice --full" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003020" id_max="901003020">
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys window" output="dumpsys.txt"/>
+  </Event>
+  <Event id_min="901003021" id_max="901003021">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/anr/traces.txt"/>
+  </Event>
+  <Event id_min="901004000" id_max="901004000">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/log/zerohung/uploading/\d{14}-\d{5}-WP\d{2}-event.log" option="delete"/>
+    <Path faultlevel="CRITICAL" privacylevel="PROTECTED" path="/data/log/zerohung/uploading/history.log" option="delete"/>
+    <Path faultlevel="CRITICAL" privacylevel="PROTECTED" path="/data/log/zerohung/uploading/internal.log" option="delete"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/data/log/reliability/zerohung/uploading/\d{14}-\d{5}-WP\d{2}-event.log" option="delete"/>
+    <Path faultlevel="CRITICAL" privacylevel="PROTECTED" path="/data/log/reliability/zerohung/uploading/history.log" option="delete"/>
+    <Path faultlevel="CRITICAL" privacylevel="PROTECTED" path="/data/log/reliability/zerohung/uploading/internal.log" option="delete"/>
+    <Import template="TPL_APP_BASE_LOG_HUNG"/>
+    <Import template="TPL_KMSG_BASE_LOG_HUNG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901004003" id_max="901004003">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/data/log/xcollie/xcollie@\d{1,13}.log"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/data/log/reliability/xcollie/xcollie@\d{1,13}.log"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901004004" id_max="901004004">
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PROTECTED" pattern="/data/log/zerohung/uploading/\d{14}-\d{5}-WP\d{2}-event.log" option="delete"/>
+    <DynamicPath faultlevel="IMPORTANT" privacylevel="PROTECTED" pattern="/data/log/reliability/zerohung/uploading/\d{14}-\d{5}-WP\d{2}-event.log" option="delete"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/data/log/zerohung/uploading/history.log" option="delete"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/data/log/zerohung/uploading/internal.log" option="delete"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/data/log/reliability/zerohung/uploading/history.log"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/data/log/reliability/zerohung/uploading/internal.log"/>
+    <Import template="TPL_APP_BASE_LOG_HUNG"/>
+    <Import template="TPL_KMSG_BASE_LOG_HUNG"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901005000" id_max="901005000">
+    <DynamicPath faultlevel="CRITICAL" privacylevel="SENSITIVE" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}.tar.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/bootFail_info.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/recovery_info.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/xloader_log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/fastboot_log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/lk.log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/sbl1.log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/last_kmsg"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/tombstone_\d{1,2}"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/system_server_crash@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/system_server_crash@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/system_server_watchdog@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/system_server_watchdog@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/critical_process_crash.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/framework_boot_fail.log"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" path="/data/log/press10/mini_bugreport.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/bootFail_info.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/recovery_info.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/xloader_log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/fastboot_log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/lk.log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/sbl1.log"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PROTECTED" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/last_kmsg"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/tombstone_\d{1,2}"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/system_server_crash@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/system_server_crash@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/system_server_watchdog@\d{1,13}.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/system_server_watchdog@\d{1,13}.txt.gz"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/critical_process_crash.txt"/>
+    <DynamicPath faultlevel="CRITICAL" privacylevel="PUBLIC" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/framework_boot_fail.log"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/applogcat-log.gz"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/last_kmsg.android.gz"/>
+    <DynamicPath faultlevel="GENERAL" privacylevel="PROTECTED" pattern="/log/reliability/boot_fail/uploading/bootfail_\d{14}_0(x|X)(\d|\w){1,12}/pmsg-ramoops-0"/>
+    <Import template="TPL_RELIABILITY_FAULTDETECT_RUN_LOG"/>
+  </Event>
+  <Event id_min="901006001" id_max="901006001">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/sanitizer/kasan/" pattern="kasan-[0-9a-fA-F]{8}.log" option="latest=1|delete"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="901006002" id_max="901006002">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/sanitizer/asan/" pattern="asan-[0-9a-fA-F]{8}.log" option="latest=1|delete"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="902000000" id_max="902000003">
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_CMD"/>
+    <Import template="TPL_PERFORMANCE_APP_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="902000001" id_max="902000001">
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="SENSITIVE" pattern="/data/media/0/tencent/MicroMsg/xlog/(.+)"/>
+  </Event>
+  <Event id_min="902010000" id_max="902010003">
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_CMD"/>
+    <Import template="TPL_PERFORMANCE_APP_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="902010001" id_max="902010001">
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="SENSITIVE" pattern="/data/media/0/tencent/MicroMsg/xlog/(.+)"/>
+  </Event>
+  <Event id_min="902040000" id_max="902040100">
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_CMD"/>
+    <Import template="TPL_PERFORMANCE_APP_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="902050000" id_max="902050100">
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_CMD"/>
+    <Import template="TPL_PERFORMANCE_APP_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="902060000" id_max="902060100">
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_CMD"/>
+    <Import template="TPL_PERFORMANCE_APP_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="902070000" id_max="902070100">
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_CMD"/>
+    <Import template="TPL_PERFORMANCE_APP_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="902080000" id_max="902080000">
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_CMD"/>
+    <Import template="TPL_PERFORMANCE_APP_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="902090000" id_max="902090000">
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_CMD"/>
+    <Import template="TPL_PERFORMANCE_APP_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="902500005" id_max="902500005">
+    <Path faultlevel="INFORMATIVE" privacylevel="SENSITIVE" dir="/data/log/jank/ubm/" pattern="\d{17}.ubm" option="latest=1|delete"/>
+  </Event>
+  <Event id_min="902500006" id_max="902500006">
+    <Path faultlevel="INFORMATIVE" privacylevel="SENSITIVE" dir="/data/log/jank/iaware/" pattern="iaware_stat_\d{4}-\d{2}-\d{2}-\d{2}-\d{2}.log" option="latest=5|delete"/>
+  </Event>
+  <Event id_min="903002002" id_max="903002002">
+    <Import template="TPL_POWER_THERMAL_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/dumpsys-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/wakeupsources-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+  </Event>
+  <Event id_min="903002004" id_max="903002004">
+    <Import template="TPL_POWER_THERMAL_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/dumpsys-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/wakeupsources-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+  </Event>
+  <Event id_min="903002005" id_max="903002005">
+    <Import template="TPL_POWER_THERMAL_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/dumpsys-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/wakeupsources-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+  </Event>
+  <Event id_min="903002007" id_max="903002009">
+    <Import template="TPL_POWER_THERMAL_BASE_LOG"/>
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/dumpsys-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/wakeupsources-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+  </Event>
+  <Event id_min="903002011" id_max="903002011">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+  </Event>
+  <Event id_min="903001056" id_max="903001056">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/dubai/upload/" pattern="dubai-[\d|-]+\.db" option="latest=2|delete"/>
+  </Event>
+  <Event id_min="903002051" id_max="903002051">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+  </Event>
+  <Event id_min="903002052" id_max="903002052">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+  </Event>
+  <Event id_min="903002053" id_max="903002053">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_SENSORHUB_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+  </Event>
+  <Event id_min="903002054" id_max="903002054">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/sensor-log"/>
+  </Event>
+  <Event id_min="903002055" id_max="903002055">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+    <DynamicPath faultlevel="INFORMATIVE" privacylevel="PROTECTED" pattern="/data/log/dubai/systrace/systrace\d?.sys" option="delete"/>
+  </Event>
+  <Event id_min="903002056" id_max="903002056">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/sleeplog/power_stats-log"/>
+  </Event>
+  <Event id_min="904200000" id_max="904200028">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/android_logs/" pattern="applogcat-log((?!F\.tar\.gz).)*" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/android_logs/" pattern="kmsgcat-log((?!F\.tar\.gz).)*" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/android_logs/" pattern="radiologcat-log((?!F\.tar\.gz).)*" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/android_logs/" pattern="rillogcat-log((?!F\.tar\.gz).)*" extrakey="FAULTCLASSIFICATION:(1|2)" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/minilog/" pattern="MINI_LOG_.+_\d{14}.zip" extrakey="FAULTCLASSIFICATION:4" option="latest=1|delete"/>
+    <Import template="TPL_MODEM_BASE_LOG"/>
+  </Event>
+  <Event id_min="904200013" id_max="904200013">
+    <Import template="TPL_VT_BASE_LOG"/>
+  </Event>
+  <Event id_min="904200000" id_max="904200000">
+    <Import template="TPL_MODEM_COM_BASE_LOG"/>
+  </Event>
+  <Event id_min="904200005" id_max="904200005">
+    <Import template="TPL_MODEM_COM_BASE_LOG"/>
+    <Import template="TPL_MODEM_SIM_DRV_BASE_LOG"/>
+  </Event>
+  <Event id_min="904200012" id_max="904200012">
+    <Import template="TPL_MODEM_HIFI_BASE_LOG"/>
+  </Event>
+  <Event id_min="920001003" id_max="920001087">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920002000" id_max="920002000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920003000" id_max="920003000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920004000" id_max="920004004">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920005000" id_max="920005013">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920006000" id_max="920006002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920007000" id_max="920007049">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920008000" id_max="920008030">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920009000" id_max="920009026">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920010000" id_max="920010011">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920011000" id_max="920011046">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920012000" id_max="920012040">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="921001000" id_max="921001008">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="921001010" id_max="921001024">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="921001031" id_max="921001035">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="921002000" id_max="921002009">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="921003000" id_max="921003001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="922001000" id_max="922001032">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="922002000" id_max="922002002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="923001000" id_max="923001000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="923002000" id_max="923002017">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_RIL_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="924001000" id_max="924001000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="924002000" id_max="924002000">
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="924003000" id_max="924003001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="925001000" id_max="925001005">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="925002000" id_max="925002018">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="925004001" id_max="925004004">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="925010001" id_max="925010004">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926001000" id_max="926001005">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926002000" id_max="926002002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_INPUT_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926003000" id_max="926003010">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_INPUT_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926004000" id_max="926004006">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_INPUT_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926004007" id_max="926004009">
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926004010" id_max="926004010">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926004011" id_max="926004026">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_INPUT_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926005000" id_max="926005009">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_SENSORHUB_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926006000" id_max="926006013">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_SENSORHUB_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926006100" id_max="926006104">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_SENSORHUB_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926007000" id_max="926007016">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_SENSORHUB_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926008000" id_max="926008020">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926009000" id_max="926009013">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926010000" id_max="926010013">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_CHARGE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="926011000" id_max="926011025">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_INPUT_BASE_LOG"/>
+    <Import template="TPL_TPTHP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927001000" id_max="927001001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927002000" id_max="927002002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927003000" id_max="927003022">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927004000" id_max="927004007">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927005000" id_max="927005005">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927006000" id_max="927006004">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927007000" id_max="927007017">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927008000" id_max="927008000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="927009000" id_max="927009032">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+    <Import template="TPL_ISP_BASE_LOG"/>
+  </Event>
+  <Event id_min="928001000" id_max="928001000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="928002000" id_max="928002025">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="928002005" id_max="928002005">
+    <Import template="TPL_DMD_MMC_CMD_LOG"/>
+  </Event>
+  <Event id_min="928002011" id_max="928002011">
+    <Import template="TPL_DMD_MMC_CMD_LOG"/>
+  </Event>
+  <Event id_min="928002016" id_max="928002016">
+    <Import template="TPL_DMD_MMC_CMD_LOG"/>
+  </Event>
+  <Event id_min="928002017" id_max="928002017">
+    <Import template="TPL_DMD_MMC_CMD_LOG"/>
+  </Event>
+  <Event id_min="928002024" id_max="928002024">
+    <Import template="TPL_DMD_MMC_CMD_LOG"/>
+  </Event>
+  <Event id_min="928003000" id_max="928003006">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="928004000" id_max="928004000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="928005000" id_max="928005002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="928005001" id_max="928005001">
+    <Import template="TPL_DMD_MMC_CMD_LOG"/>
+  </Event>
+  <Event id_min="928006000" id_max="928006024">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="928007000" id_max="928007016">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="928008000" id_max="928008019">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="928009000" id_max="928009000">
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="920004200" id_max="920004201">
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="938008000" id_max="938008000">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/jank/iotrace/log_hi1861_fsr" option="delete"/>
+  </Event>
+  <Event id_min="907000001" id_max="907000024">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907003001" id_max="907003015">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907006001" id_max="907006038">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907009001" id_max="907009013">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907012001" id_max="907012010">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907015001" id_max="907015001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907015600" id_max="907015600">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907015601" id_max="907015601">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907015700" id_max="907015703">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907018001" id_max="907018011">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907018011" id_max="907018011">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907021001" id_max="907021005">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907024001" id_max="907024006">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907030001" id_max="907030009">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907031001" id_max="907031007">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907032001" id_max="907032001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907033001" id_max="907033008">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907034001" id_max="907034001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907035001" id_max="907035002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907040001" id_max="907040003">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907051001" id_max="907051005">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907052001" id_max="907052004">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907061001" id_max="907061001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907061002" id_max="907061002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907069001" id_max="907069006">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907090001" id_max="907090006">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907091001" id_max="907091004">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907092001" id_max="907092001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907100001" id_max="907100001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907102001" id_max="907102007">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907119001" id_max="907119001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907119002" id_max="907119002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907124001" id_max="907124001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907124002" id_max="907124002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907126001" id_max="907126001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907126002" id_max="907126002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907126003" id_max="907126003">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907132001" id_max="907132001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907132002" id_max="907132002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907142001" id_max="907142001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907142002" id_max="907142002">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907144001" id_max="907144003">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907145001" id_max="907145001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907350000" id_max="907350009">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907400000" id_max="907400001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907400002" id_max="907400003">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys activity broadcasts" output="activity_broadcasts.txt"/>
+  </Event>
+  <Event id_min="907400004" id_max="907400008">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907400009" id_max="907400013">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys window" output="window.txt"/>
+    <CMD faultlevel="INFORMATIVE" privacylevel="PROTECTED" run="dumpsys input" output="input.txt"/>
+  </Event>
+  <Event id_min="907400014" id_max="907400017">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907400281" id_max="907400283">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+    <Import template="TPL_RIL_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="907403000" id_max="907403000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+    <Import template="TPL_RIL_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="907046001" id_max="907046004">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+    <Import template="TPL_RIL_BASE_LOG_SIMPLE"/>
+  </Event>
+  <Event id_min="907137000" id_max="907137003">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_LOGCAT_APP_CMD"/>
+  </Event>
+  <Event id_min="907117001" id_max="907117001">
+    <Import template="TPL_APP_BASE_LOG_EARLIER"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/log/recovery/recovery_log"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/log/recovery/last_kmsg"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/log/recovery/recovery_log_upload"/>
+    <Path faultlevel="IMPORTANT" privacylevel="PROTECTED" path="/log/recovery/last_kmsg_upload"/>
+  </Event>
+  <Event id_min="908000005" id_max="908000005">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/sdcard/log/LogService/12/logtrack/" pattern=".*" option="latest=10|delete"/>
+  </Event>
+  <Event id_min="908003002" id_max="908003002">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/LogService/0/" pattern="enginelog\.\d{8,17}.txt" option="latest=10|delete"/>
+  </Event>
+  <Event id_min="909001003" id_max="909001003">
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/wifi/wifi_lowpower_logs.txt" option="delete"/>
+  </Event>
+  <Event id_min="909002021" id_max="909002023">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="wifi_log_*" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="cnss_fw_logs_(.+).txt" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="host_driver_logs_(.+).txt" option="latest=2"/>
+  </Event>
+  <Event id_min="909002024" id_max="909002025">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/wifi/wifi_env_0.dump"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" path="/data/log/wifi/wifi_env_1.dump"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="SENSITIVE" dir="/data/log/tcpdump/" pattern=".*" option="latest=4"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="wifi_log_*" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="cnss_fw_logs_(.+).txt" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="host_driver_logs_(.+).txt" option="latest=2"/>
+  </Event>
+  <Event id_min="909002026" id_max="909002028">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="wifi_log_*" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="cnss_fw_logs_(.+).txt" option="latest=2"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/wifi/" pattern="host_driver_logs_(.+).txt" option="latest=2"/>
+  </Event>
+  <Event id_min="909002029" id_max="909002029">
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/sdcard/log/wifi/AP_Model/" pattern=".+.html" option="latest=3|delete"/>
+  </Event>
+  <Event id_min="909002030" id_max="909002030">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="909002034" id_max="909002034">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="909002036" id_max="909002038">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="909030001" id_max="909030021">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="909031001" id_max="909031009">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="910001000" id_max="910001000">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/gps_log/gps/" pattern="gl-\d{4}-\d{2}-\d{2}-\d{6}.a.txt" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/gps_log/gps/" pattern="gl-\d{4}-\d{2}-\d{2}-\d{6}.txt" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/gps_log/gps/.tmp/" pattern="gl-\d{4}-\d{2}-\d{2}-\d{6}.tmp" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/gps_log/lhd/" pattern="lh-\d{4}-\d{2}-\d{2}-\d{6}.txt" option="latest=1"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/gps_log/lhd/.tmp/" pattern="lh-\d{4}-\d{2}-\d{2}-\d{6}.tmp" option="latest=1"/>
+  </Event>
+  <Event id_min="910000001" id_max="910000001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="910000007" id_max="910000007">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="912001000" id_max="912001008">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_FINGERPRINT_BASE_LOG"/>
+    <Import template="TPL_SENSORHUB_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="912001009" id_max="912001011">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_FINGERPRINT_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="912001012" id_max="912001013">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_FINGERPRINT_BASE_LOG"/>
+    <Import template="TPL_SENSORHUB_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="912001014" id_max="912001022">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Import template="TPL_FINGERPRINT_BASE_LOG"/>
+    <Import template="TPL_PERFORMANCE_BASE_LOG"/>
+    <Import template="TPL_DMD_BASE_LOG"/>
+  </Event>
+  <Event id_min="913000004" id_max="913000004">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="INFORMATIVE" privacylevel="PROTECTED" dir="/data/log/bt/" pattern="btsnoop_hci_(.+).log" option="latest=1"/>
+  </Event>
+  <Event id_min="915000001" id_max="915000001">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="916000001" id_max="916000100">
+    <Import template="TPL_AUDIO_ANC_BASE_LOG"/>
+    <Import template="TPL_AUDIO_ANC_VOICE_LOG"/>
+  </Event>
+  <Event id_min="916000101" id_max="916000200">
+    <Import template="TPL_AUDIO_SMARTPA_BASE_LOG"/>
+  </Event>
+  <Event id_min="918000000" id_max="918000002">
+    <Import template="TPL_APP_BASE_LOG"/>
+  </Event>
+  <Event id_min="918000020" id_max="918000021">
+    <Import template="TPL_APP_BASE_LOG"/>
+  </Event>
+  <Event id_min="918000040" id_max="918000041">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/data/log/isp-log/" pattern="isp-log(.*)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/data/isp-log/" pattern="isp-log(.*)" option="latest=2"/>
+  </Event>
+  <Event id_min="918000060" id_max="918000060">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/data/log/isp-log/" pattern="isp-log(.*)" option="latest=2"/>
+    <Path faultlevel="GENERAL" privacylevel="PROTECTED" dir="/data/isp-log/" pattern="isp-log(.*)" option="latest=2"/>
+  </Event>
+  <Event id_min="918000061" id_max="918000061">
+    <Import template="TPL_APP_BASE_LOG"/>
+    <Import template="TPL_KMSG_BASE_LOG"/>
+  </Event>
+  <Event id_min="918001000" id_max="918001001">
+    <Import template="TPL_APP_BASE_LOG"/>
+  </Event>
+  <Event id_min="918001020" id_max="918001020">
+    <Import template="TPL_APP_BASE_LOG"/>
+  </Event>
+  <Event id_min="918001040" id_max="918001040">
+    <Import template="TPL_APP_BASE_LOG"/>
+  </Event>
+  <Event id_min="918001041" id_max="918001041">
+    <Import template="TPL_APP_BASE_LOG"/>
+  </Event>
+  <Event id_min="940000012" id_max="940000012">
+    <Import template="TPL_APP_BASE_LOG_SIMPLE"/>
+    <Import template="TPL_KMSG_BASE_LOG_SIMPLE"/>
+  </Event>
+</AutoUpload>
