@@ -1,0 +1,4 @@
+version=1.10.17.100
+type=NCFG
+subtype=NIK-AL00
+compatibleVersion=1

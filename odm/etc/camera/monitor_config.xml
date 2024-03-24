@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GB2312"?>
+<MaintainConfig  Version="MaintainConfig_V1.0" Time="20160720">
+    <TraceConfig>
+        <Enable>1</Enable>
+        <Snip>1</Snip>
+        <MaxBufferSize>2097152</MaxBufferSize>
+        <AfMaxCount>10</AfMaxCount>
+    </TraceConfig>
+    <MonitorConfig Enable="1">
+        <!-- "IPP_stat" buffer monitor will be disabled by code in commercial version to improve performance -->
+        <Monitor Type="PP_foreground" WatchDog="0" Buffer="0"/>
+        <Monitor Type="PP_background" WatchDog="1" Buffer="1"/>
+        <Monitor Type="IPP_stat" WatchDog="1" Buffer="1"/>
+        <Monitor Type="IPP_post" WatchDog="1" Buffer="1"/>
+    </MonitorConfig>
+    <WatchDogConfig>
+        <LoopPeriodInMs>500</LoopPeriodInMs>
+        <WatchDogItem>
+            <!-- "IPP_process" will be disabled by code in commercial version to improve performance -->
+            <Item Name="PP_constructor" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+            </Item>
+            <Item Name="PP_sos" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+            </Item>
+            <Item Name="PP_process" Enable="1" DefaultWarnThreshold="1500" DefaultErrorThreshold="3000">
+                <TimeOutThreshold AlgoName="digitalzoom" Warn="2000" Error="4500"/>
+                <TimeOutThreshold AlgoName="dualdepth" Warn="2000" Error="4500"/>
+                <TimeOutThreshold AlgoName="davincidsp" Warn="2000" Error="4500"/>
+                <TimeOutThreshold AlgoName="opticalzoomdsp" Warn="3500" Error="4500"/>
+            </Item>
+            <Item Name="PP_getFrame" Enable="1" DefaultWarnThreshold="100" DefaultErrorThreshold="400">
+            </Item>
+            <Item Name="PP_eos" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+            </Item>
+            <Item Name="PP_destructor" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+            </Item>
+            <Item Name="IPP_create" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+                <TimeOutThreshold AlgoName="SceneDetection" Warn="800" Error="1600"/>
+            </Item>
+            <Item Name="IPP_start" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+            </Item>
+            <Item Name="IPP_process" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+            </Item>
+            <Item Name="IPP_stop" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+            </Item>
+            <Item Name="IPP_destroy" Enable="1" DefaultWarnThreshold="400" DefaultErrorThreshold="1000">
+            </Item>
+            <Item Name="snapshot" Enable="1" DefaultWarnThreshold="1000" DefaultErrorThreshold="2000">
+                <TimeOutThreshold AlgoName="edof" Warn="1500" Error="2500"/>
+                <TimeOutThreshold AlgoName="pro_camera" Warn="35000" Error="40000"/>
+            </Item>
+        </WatchDogItem>
+    </WatchDogConfig>
+    <BufferMonitorConfig>
+        <DefaultIppCountThreshold>10</DefaultIppCountThreshold>
+        <IppCountThreshold>
+            <Threshold Name="SceneDetection" ThresholdCount="150"/>
+        </IppCountThreshold>
+    </BufferMonitorConfig>
+</MaintainConfig>

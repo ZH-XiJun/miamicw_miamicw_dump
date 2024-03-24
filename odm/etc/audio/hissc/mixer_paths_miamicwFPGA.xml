@@ -1,0 +1,569 @@
+<mixer>
+  <ctl name="FS_3RDCODEC_L_DLINK" value="3" />
+  <ctl name="FS_3RDCODEC_R_DLINK" value="3" />
+  <ctl name="FS_VOICE_L_DLINK" value="2" />
+  <ctl name="FS_VOICE_R_DLINK" value="2" />
+  <ctl name="FS_AUDIO_L_UPLINK" value="0" />
+  <ctl name="FS_AUDIO_R_UPLINK" value="0" />
+  <ctl name="FS_VOICE_L_UPLINK" value="2" />
+  <ctl name="FS_VOICE_R_UPLINK" value="2" />
+  <ctl name="FS_MIC3_UPLINK" value="2" />
+  <ctl name="FS_ECHO_L_UPLINK" value="2" />
+  <ctl name="FS_ECHO_R_UPLINK" value="2" />
+  <ctl name="VOICE_L_DN_PGA_GAIN" value="0" />
+  <ctl name="VOICE_L_DN_PGA_BYPASS" value="0" />
+  <ctl name="VOICE_R_DN_PGA_GAIN" value="0" />
+  <ctl name="VOICE_R_DN_PGA_BYPASS" value="0" />
+  <ctl name="AUDIO_L_DN_PGA_GAIN" value="0" />
+  <ctl name="AUDIO_L_DN_PGA_BYPASS" value="0" />
+  <ctl name="AUDIO_R_DN_PGA_GAIN" value="0" />
+  <ctl name="AUDIO_R_DN_PGA_BYPASS" value="0" />
+  <ctl name="SIDETONE_PGA_BYPASS" value="0" />
+  <ctl name="SIDETONE_PGA" value="0" />
+  <ctl name="TX_MIXER2_GAIN1_PGA" value="0" />
+  <ctl name="I2S3" value="3" />
+  <ctl name="VOICE_L_DN_SRCUP_SRC1_MODE" value="2" />
+  <ctl name="DACL_SRC2_MODE" value="4" />
+  <ctl name="DACL_SRC2" value="3" />
+  <ctl name="VOICE_R_DN_SRCUP_SRC3_MODE" value="2" />
+  <ctl name="DACR_SRC4_MODE" value="4" />
+  <ctl name="DACR_SRC4" value="3" />
+  <ctl name="AUDIO_L_UP_SRC5_MODE" value="1" />
+  <ctl name="AUDIO_L_UP_SRC5" value="3" />
+  <ctl name="AUDIO_R_UP_SRC6_MODE" value="1" />
+  <ctl name="AUDIO_R_UP_SRC6" value="3" />
+  <ctl name="VOICE_L_UP_SRC7_MODE" value="4" />
+  <ctl name="VOICE_L_UP_SRC7" value="2" />
+  <ctl name="VOICE_R_UP_SRC8_MODE" value="4" />
+  <ctl name="VOICE_R_UP_SRC8" value="2" />
+  <ctl name="MIC3_UP_SRC9_MODE" value="4" />
+  <ctl name="MIC3_UP_SRC9" value="2" />
+  <ctl name="ECHO_L_UP_SRC10_MODE" value="4" />
+  <ctl name="ECHO_L_UP_SRC10" value="2" />
+  <ctl name="ECHO_R_UP_SRC11_MODE" value="4" />
+  <ctl name="ECHO_R_UP_SRC11" value="2" />
+  <ctl name="BT_TX_SRCDN_SRC12_MODE" value="0" />
+  <ctl name="BT_L_RX_SRCUP_IN_SRC12" value="2" />
+  <ctl name="BT_L_RX_SRCUP_OUT_SRC12" value="2" />
+  <ctl name="BT_R_RX_SRCDN_SRC13_MODE" value="0" />
+  <ctl name="BT_R_RX_SRCUP_IN_SRC13" value="2" />
+  <ctl name="BT_R_RX_SRCUP_OUT_SRC13" value="2" />
+  <ctl name="BT_L_RX_SRCDN_SRC14_MODE" value="0" />
+  <ctl name="BT_L_RX_SRCDN_IN_SRC14" value="2" />
+  <ctl name="BT_R_RX_SRCUP_OUT_SRC14" value="2" />
+  <ctl name="BT_R_RX_SRCDN_SRC15_MODE" value="0" />
+  <ctl name="BT_R_RX_SRCDN_IN_SRC15" value="2" />
+  <ctl name="BT_R_RX_SRCDN_OUT_SRC15" value="2" />
+  <ctl name="BT_TX_SRCDN_S2_SRC_MODE" value="0" />
+  <ctl name="BT_TX_SRCDN_OUT_S2_SRC" value="1" />
+  <ctl name="AUDIO_L_UP_PGA_GAIN" value="0" />
+  <ctl name="AUDIO_L_UP_PGA_BYPASS" value="0" />
+  <ctl name="AUDIO_R_UP_PGA_GAIN" value="0" />
+  <ctl name="AUDIO_R_UP_PGA_BYPASS" value="0" />
+  <ctl name="MIC3_UP_PGA_GAIN" value="0" />
+  <ctl name="MIC3_UP_PGA_BYPASS" value="0" />
+  <ctl name="IN1_S2_L_PGA" value="0" />
+  <ctl name="IN2_VOICE_DL_PGA" value="0" />
+  <ctl name="IN3_AUDIO_DL_PGA" value="0" />
+  <ctl name="IN4_SIDETONE_DL_PGA" value="0" />
+  <ctl name="IN1_S2_R_PGA" value="0" />
+  <ctl name="IN2_VOICE_DR_PGA" value="0" />
+  <ctl name="IN3_AUDIO_DR_PGA" value="0" />
+  <ctl name="IN4_SIDETONE_DR_PGA" value="0" />
+  <ctl name="ANA_HPL_PGA_MUTE" value="0" />
+  <ctl name="ANA_HPL_PGA" value="10" />
+  <ctl name="ANA_HPR_PGA_MUTE" value="0" />
+  <ctl name="ANA_HPR_PGA" value="10" />
+  <ctl name="ANA_SPK_PGA_MUTE" value="0" />
+  <ctl name="ANA_SPK_PGA" value="0" />
+  <ctl name="ANA_EAR_PGA_MUTE" value="0" />
+  <ctl name="ANA_EAR_PGA" value="13" />
+  <ctl name="ANA_LINEOUT_PGA_MUTE" value="0" />
+  <ctl name="ANA_LINEOUT_PGA" value="10" />
+  <ctl name="ANA_MAINMIC_PGA_MUTE" value="0" />
+  <ctl name="ANA_MAINMIC_PGA" value="0" />
+  <ctl name="ANA_AUXMIC_PGA_MUTE" value="0" />
+  <ctl name="ANA_AUXMIC_PGA" value="0" />
+  <ctl name="ANA_MIC3_PGA_MUTE" value="0" />
+  <ctl name="ANA_MIC3_PGA" value="0" />
+  <ctl name="ANA_MIXER_EAR_L_PGA" value="0" />
+  <ctl name="ANA_MIXER_EAR_R_PGA" value="0" />
+  <ctl name="DAC_DL MIXER IN2_VOICE_DL" value="0" />
+  <ctl name="DAC_DL MIXER IN3_AUDIO_DL" value="0" />
+  <ctl name="DAC_DR MIXER IN2_VOICE_DR" value="0" />
+  <ctl name="DAC_DR MIXER IN3_AUDIO_DR" value="0" />
+  <ctl name="HP_DAC_L MIXER DACL" value="0" />
+  <ctl name="HP_DAC_R MIXER DACR" value="0" />
+  <ctl name="SIF_EN MIXER SIF_DACL_EN" value="0" />
+  <ctl name="SIF_EN MIXER SIF_DACR_EN" value="0" />
+  <ctl name="SIF_EN MIXER SIF_ADCL_EN" value="0" />
+  <ctl name="SIF_EN MIXER SIF_ADCR_EN" value="0" />
+  <ctl name="SIF_EN MIXER SIF_ADC3_EN" value="0" />
+  <ctl name="ANA_EAR MIXER DACL" value="0" />
+  <ctl name="ANA_EAR MIXER DACR" value="0" />
+  <ctl name="S2_DOWNLINK_EN MIXER S2_DACL_MIXER" value="0" />
+  <ctl name="S2_DOWNLINK_EN MIXER S2_DACR_MIXER" value="0" />
+  <ctl name="I2S1_S1L MUX" value="DACL_MIXER" />
+  <ctl name="I2S1_S1R MUX" value="DACR_MIXER" />
+  <ctl name="ANA_ADC1 MIXER MAIN MIC" value="0" />
+  <ctl name="ANA_ADC2 MIXER MAIN MIC" value="0" />
+  <ctl name="ANA_ADC2 MIXER AUX MIC" value="0" />
+  <ctl name="ANA_ADC3 MIXER MIC3" value="0" />
+  <ctl name="ANA_SIF_EN MIXER ANA_SIFL_EN" value="0" />
+  <ctl name="ANA_SIF_EN MIXER ANA_SIFR_EN" value="0" />
+  <ctl name="ANA_SIF_EN MIXER ANA_MUX3_EN" value="0" />
+  <ctl name="ANA_SIF_EN MIXER ANA_MUX4_EN" value="0" />
+  <ctl name="ANA_SIF_EN MIXER ANA_MUX5_EN" value="0" />
+  <ctl name="DAC_DL MUX" value="DACL_MIXER" />
+  <ctl name="DAC_DR MUX" value="DACR_MIXER" />
+  <ctl name="AUDIO_UL MUX" value="ADCL" />
+  <ctl name="AUDIO_UR MUX" value="ADCR" />
+  <ctl name="VOICE_UL MUX" value="ADCL_SRC" />
+  <ctl name="VOICE_UR MUX" value="ADCR_SRC" />
+  <ctl name="MIC3_UP MUX" value="ADC MIC3_SRC" />
+  <ctl name="ECHO_L MUX" value="DACL_MIXER" />
+  <ctl name="ECHO_R MUX" value="DACR_MIXER" />
+  <ctl name="ADC1 MUX" value="ADC1" />
+  <ctl name="ADC2 MUX" value="ADC2" />
+  <ctl name="ADC3 MUX" value="ADC3" />
+  <ctl name="ANA_DAC_L MUX" value="SIFL" />
+  <ctl name="ANA_DAC_R MUX" value="SIFR" />
+  <ctl name="ANA_MUX3 MUX" value="ADC1" />
+  <ctl name="ANA_MUX4 MUX" value="ADC2" />
+  <ctl name="ANA_MUX5 MUX" value="ADC3" />
+  <ctl name="MAIN_HP_MIC MUX" value="MAIN_MIC" />
+  <ctl name="AUDIO_UL_FIFO SWITCH ENABLE" value="0" />
+  <ctl name="AUDIO_UR_FIFO SWITCH ENABLE" value="0" />
+  <ctl name="VOICE_UL_FIFO SWITCH ENABLE" value="0" />
+  <ctl name="VOICE_UR_FIFO SWITCH ENABLE" value="0" />
+  <ctl name="MIC3_UP_FIFO SWITCH ENABLE" value="0" />
+  <ctl name="ECHO_L_FIFO SWITCH ENABLE" value="0" />
+  <ctl name="ECHO_R_FIFO SWITCH ENABLE" value="0" />
+  <ctl name="ANA_DAC_L SWITCH DACL" value="0" />
+  <ctl name="ANA_DAC_R SWITCH DACR" value="0" />
+  <ctl name="ANA_SPK SWITCH ENABLE" value="0" />
+  <ctl name="ANA_RCV SWITCH ENABLE" value="0" />
+  <ctl name="ANA_LOUT SWITCH ENABLE" value="0" />
+  <ctl name="I2S1_I2S_TX SWITCH I2S_SWITCH_EN" value="0" />
+  <ctl name="I2S1_TDM_TX SWITCH TDM_SWITCH_EN" value="0" />
+  <ctl name="I2S1_CLK SWITCH I2S1_CLK_EN" value="0" />
+  <ctl name="I2S1_I2S_RX SWITCH I2S1_I2S_RX_EN" value="0" />
+  <ctl name="I2S1_TDM_RX SWITCH I2S1_TDM_RX_EN" value="0" />
+  <ctl name="S2_SRC_I2S2_TX SWITCH I2S2_SWITCH_EN" value="0" />
+  <ctl name="I2S2_CLK SWITCH I2S2_CLK_EN" value="0" />
+  <ctl name="THIRD_CODEC_I2S3_TX SWITCH I2S3_SWITCH_EN" value="0" />
+  <ctl name="I2S3_CLK SWITCH I2S3_CLK_EN" value="0" />
+  <ctl name="I2S3_RX SWITCH I2S3_RX_EN" value="0" />
+  <ctl name="ANA_MAINPGA_BOOST" value="0" />
+  <ctl name="ANA_AUXPGA_BOOST" value="0" />
+  <ctl name="ANA_MIC3PGA_BOOST" value="0" />
+  <ctl name="ADCL_CIC_GAIN" value="46" />
+  <ctl name="ADCR_CIC_GAIN" value="46" />
+  <ctl name="ADC_MIC3_CIC_GAIN" value="46" />
+
+  <!-- init paths -->
+  <path name="init" >
+      <!-- ctl name="HISSC_EXTERNAL_12288K_SEL" value="2" / -->
+  </path>
+
+  <!--down link -->
+  <path name = "audio-play-select" >
+      <ctl name="DAC_DL MIXER IN3_AUDIO_DL" value="1"/>
+      <ctl name="DAC_DR MIXER IN3_AUDIO_DR" value="1"/>
+      <ctl name="DAC_DL MUX" value="DACL_MIXER"/>
+      <ctl name="DAC_DR MUX" value="DACR_MIXER"/>
+  </path>
+
+  <path name = "voice-downlink-select" >
+      <ctl name="DAC_DL MIXER IN2_VOICE_DL" value="1"/>
+      <ctl name="DAC_DR MIXER IN2_VOICE_DR" value="1"/>
+      <ctl name="DAC_DL MUX" value="DACL_MIXER"/>
+      <ctl name="DAC_DR MUX" value="DACR_MIXER"/>
+  </path>
+
+  <path name = "voice-downlink-src-nb" >
+	   <ctl name="FS_VOICE_L_DLINK" value="0" />
+	   <ctl name="FS_VOICE_R_DLINK" value="0" />
+	   <ctl name="VOICE_L_DN_SRCUP_SRC1_MODE" value="5" />
+	   <ctl name="VOICE_R_DN_SRCUP_SRC3_MODE" value="5" />
+  </path>
+
+  <path name = "voice-downlink-src-wb" >
+	   <ctl name="FS_VOICE_L_DLINK" value="1" />
+	   <ctl name="FS_VOICE_R_DLINK" value="1" />
+	   <ctl name="VOICE_L_DN_SRCUP_SRC1_MODE" value="1" />
+	   <ctl name="VOICE_R_DN_SRCUP_SRC3_MODE" value="1" />
+  </path>
+
+   <path name = "voice-downlink-src-swb" >
+	   <ctl name="FS_VOICE_L_DLINK" value="2" />
+	   <ctl name="FS_VOICE_R_DLINK" value="2" />
+	   <ctl name="VOICE_L_DN_SRCUP_SRC1_MODE" value="2" />
+	   <ctl name="VOICE_R_DN_SRCUP_SRC3_MODE" value="2" />
+  </path>
+
+  <path name ="rx-soc" >
+      <ctl name="SIF_EN MIXER SIF_DACL_EN" value="1"/>
+      <ctl name="SIF_EN MIXER SIF_DACR_EN" value="1"/>
+  </path>
+
+  <path name="rx-ana" >
+      <ctl name="ANA_SIF_EN MIXER ANA_SIFL_EN" value="1"/>
+      <ctl name="ANA_SIF_EN MIXER ANA_SIFR_EN" value="1"/>
+      <ctl name="ANA_DAC_L MUX" value="SIFL"/>
+      <ctl name="ANA_DAC_R MUX" value="SIFR"/>
+      <ctl name="ANA_DAC_L SWITCH DACL" value="1"/>
+      <ctl name="ANA_DAC_R SWITCH DACR" value="1"/>
+      <ctl name="ANA_EAR MIXER DACL" value="1"/>
+      <ctl name="ANA_EAR MIXER DACR" value="1"/>
+  </path>
+
+  <path name="headphone" >
+      <ctl name="HP_DAC_L MIXER DACL" value="1"/>
+      <ctl name="HP_DAC_R MIXER DACR" value="1"/>
+  </path>
+
+  <path name="headset" >
+      <path name="headphone" />
+  </path>
+
+  <path name="speaker-classD" >
+      <ctl name="ANA_SPK SWITCH ENABLE" value="1"/>
+  </path>
+
+  <path name="earpiece" >
+      <ctl name="ANA_RCV SWITCH ENABLE" value="1"/>
+  </path>
+
+  <path name="lineout" >
+      <ctl name="ANA_LOUT SWITCH ENABLE" value="1"/>
+  </path>
+
+
+  <path name = "voice-downlink-path-without-BT" >
+      <path name = "voice-downlink-select" />
+      <path name = "rx-soc" />
+      <path name = "rx-ana" />
+  </path>
+
+
+  <path name="call_out_without_BT" >
+      <path name="voice-downlink-src-nb" />
+      <path name = "voice-downlink-path-without-BT" />
+  </path>
+
+  <path name="wb_call_out_without_BT" >
+      <path name="voice-downlink-src-wb" />
+      <path name = "voice-downlink-path-without-BT" />
+  </path>
+
+  <path name="swb_call_out_without_BT" >
+      <path name="voice-downlink-src-swb" />
+      <path name = "voice-downlink-path-without-BT" />
+  </path>
+
+
+  <!-- paths for hal -->
+  <path name="media-earpiece" >
+      <path name="init" />
+      <path name="audio-play-select" />
+      <path name="rx-soc" />
+      <path name="rx-ana" />
+      <path name="earpiece" />
+  </path>
+
+  <path name="media-speaker" >
+      <path name="init" />
+      <path name="audio-play-select" />
+      <path name="rx-soc" />
+      <path name="rx-ana" />
+      <path name="speaker-classD" />
+  </path>
+
+  <path name="media-headphone" >
+      <path name="init" />
+      <path name="audio-play-select" />
+      <path name="rx-soc" />
+      <path name="rx-ana" />
+      <path name="headphone" />
+  </path>
+
+  <path name="media-headset" >
+      <path name="media-headphone" />
+  </path>
+
+  <path name="media-bt-sco" >
+  </path>
+
+  <path name="media-speaker-earpiece" >
+      <path name="init" />
+      <path name="media-earpiece" />
+      <path name="speaker-classD" />
+  </path>
+
+  <path name="media-speaker-headset" >
+      <path name="init" />
+      <path name="media-headset" />
+      <path name="speaker-classD" />
+  </path>
+
+  <path name="media-speaker-headphone" >
+      <path name="media-speaker-headset" />
+  </path>
+
+  <path name="media-bt-sco-headset-speaker" >
+  </path>
+
+  <!-- voice -->
+    <path name="call-m1-earpiece" >
+      <path name="init" />
+      <path name="call_out_without_BT" />
+      <path name="earpiece" />
+	  <path name="headset" />
+  </path>
+
+  <path name="call-m1-speaker" >
+      <path name="init" />
+      <path name="call_out_without_BT" />
+      <path name="speaker-classD" />
+  </path>
+
+  <path name="call-m1-headphone" >
+      <path name="init" />
+      <path name="call_out_without_BT" />
+      <path name="headphone" />
+  </path>
+
+  <path name="call-m1-headset" >
+      <path name="init" />
+      <path name="call_out_without_BT" />
+      <path name="headset" />
+  </path>
+
+  <path name="call-wb-m1-earpiece" >
+      <path name="init" />
+      <path name="wb_call_out_without_BT" />
+      <path name="earpiece" />
+	  <path name="headset" />
+  </path>
+
+  <path name="call-wb-m1-speaker" >
+      <path name="init" />
+      <path name="wb_call_out_without_BT" />
+      <path name="speaker-classD" />
+  </path>
+
+  <path name="call-wb-m1-headphone" >
+      <path name="init" />
+      <path name="wb_call_out_without_BT" />
+      <path name="headphone" />
+  </path>
+
+  <path name="call-wb-m1-headset" >
+      <path name="init" />
+      <path name="wb_call_out_without_BT" />
+      <path name="headset" />
+  </path>
+
+  <path name="call-swb-m1-earpiece" >
+      <path name="init" />
+      <path name="swb_call_out_without_BT" />
+      <path name="earpiece" />
+  </path>
+
+  <path name="call-swb-m1-speaker" >
+      <path name="init" />
+      <path name="swb_call_out_without_BT" />
+      <path name="speaker-classD" />
+  </path>
+
+  <path name="call-swb-m1-headphone" >
+      <path name="init" />
+      <path name="swb_call_out_without_BT" />
+      <path name="headphone" />
+  </path>
+
+  <path name="call-swb-m1-headset" >
+      <path name="init" />
+      <path name="swb_call_out_without_BT" />
+      <path name="headset" />
+  </path>
+
+  <!-- uplink-->
+   <path name = "audio-record-select" >
+      <ctl name="AUDIO_UL MUX" value="ADCL"/>
+      <ctl name="AUDIO_UR MUX" value="ADCR"/>
+      <ctl name="AUDIO_UL_FIFO SWITCH ENABLE" value="1"/>
+      <ctl name="AUDIO_UR_FIFO SWITCH ENABLE" value="1"/>
+  </path>
+
+   <path name = "voice-uplink-select" >
+      <ctl name="VOICE_UL MUX" value="ADCL_SRC"/>
+      <ctl name="VOICE_UR MUX" value="ADCR_SRC"/>
+      <ctl name="VOICE_UL_FIFO SWITCH ENABLE" value="1"/>
+      <ctl name="VOICE_UR_FIFO SWITCH ENABLE" value="1"/>
+  </path>
+
+
+  <path name = "voice-uplink-src-nb" >
+      <ctl name="FS_VOICE_L_UPLINK" value="0" />
+      <ctl name="FS_VOICE_R_UPLINK" value="0" />
+      <ctl name="VOICE_L_UP_SRC7_MODE" value="2" />
+      <ctl name="VOICE_R_UP_SRC8_MODE" value="2" />
+      <ctl name="VOICE_L_UP_SRC7" value="0" />
+      <ctl name="VOICE_R_UP_SRC8" value="0" />
+  </path>
+
+  <path name = "voice-uplink-src-wb" >
+      <ctl name="FS_VOICE_L_UPLINK" value="1" />
+      <ctl name="FS_VOICE_R_UPLINK" value="1" />
+      <ctl name="VOICE_L_UP_SRC7_MODE" value="0" />
+      <ctl name="VOICE_R_UP_SRC8_MODE" value="0" />
+      <ctl name="VOICE_L_UP_SRC7" value="1" />
+      <ctl name="VOICE_R_UP_SRC8" value="1" />
+  </path>
+
+  <path name = "voice-uplink-src-swb" >
+      <ctl name="FS_VOICE_L_UPLINK" value="2" />
+      <ctl name="FS_VOICE_R_UPLINK" value="2" />
+      <ctl name="VOICE_L_UP_SRC7_MODE" value="4" />
+      <ctl name="VOICE_R_UP_SRC8_MODE" value="4" />
+      <ctl name="VOICE_L_UP_SRC7" value="2" />
+      <ctl name="VOICE_R_UP_SRC8" value="2" />
+  </path>
+
+
+  <path name = "tx-soc" >
+      <ctl name="ADC1 MUX" value="ADC1"/>
+      <ctl name="ADC2 MUX" value="ADC2"/>
+      <ctl name="SIF_EN MIXER SIF_ADCL_EN" value="1"/>
+      <ctl name="SIF_EN MIXER SIF_ADCR_EN" value="1"/>
+  </path>
+
+   <!-- IN COMMON -->
+  <path name="main-aux-mic" >
+      <ctl name="MAIN_HP_MIC MUX" value="MAIN_MIC"/>
+      <ctl name="ANA_ADC1 MIXER MAIN MIC" value="1"/>
+      <ctl name="ANA_ADC2 MIXER AUX MIC" value="1"/>
+  </path>
+
+  <path name="call-main-aux-mic" >
+      <path name="main-aux-mic" />
+  </path>
+
+  <path name="call-handfree-main-aux-mic" >
+      <ctl name="MAIN_HP_MIC MUX" value="MAIN_MIC"/>
+      <ctl name="ANA_ADC2 MIXER MAIN MIC" value="1"/>
+      <!-- ctl name="ANA_ADC1 MIXER AUX MIC" value="1"/ -->
+      <!-- todo:add route map -->
+  </path>
+
+  <path name="call-headset-mic" >
+      <ctl name="MAIN_HP_MIC MUX" value="HP_MIC"/>
+      <ctl name="ANA_ADC2 MIXER MAIN MIC" value="1"/>
+      <ctl name="ANA_ADC1 MIXER MAIN MIC" value="1"/>
+  </path>
+
+  <path name="tx-ana" >
+      <ctl name="ANA_MUX3 MUX" value="ADC1"/>
+      <ctl name="ANA_MUX4 MUX" value="ADC2"/>
+      <ctl name="ANA_SIF_EN MIXER ANA_MUX3_EN" value="1"/>
+      <ctl name="ANA_SIF_EN MIXER ANA_MUX4_EN" value="1"/>
+  </path>
+
+  <path name = "voice-uplink-path-without-BT" >
+      <path name = "tx-ana" />
+      <path name = "tx-soc" />
+      <path name = "voice-uplink-select" />
+  </path>
+
+  <path name = "voice-uplink-path-BT" >
+
+  </path>
+
+  <path name="call_in_without_BT" >
+      <path name="voice-uplink-src-nb" />
+      <path name="voice-uplink-path-without-BT" />
+  </path>
+
+  <path name="wb_call_in_without_BT" >
+      <path name="voice-uplink-src-wb" />
+      <path name="voice-uplink-path-without-BT" />
+  </path>
+
+  <path name="swb_call_in_without_BT" >
+      <path name="voice-uplink-src-swb" />
+      <path name="voice-uplink-path-without-BT"/>
+  </path>
+
+  <!-- paths for hal -->
+  <path name="media-main-mic" >
+      <path name="init" />
+      <path name="main-aux-mic" />
+      <path name="tx-ana" />
+      <path name="audio-record-select" />
+      <path name="tx-soc" />
+  </path>
+
+  <path name="media-headset-mic" >
+      <path name="main-aux-mic" />
+      <path name="tx-ana" />
+      <path name="audio-record-select" />
+      <path name="tx-soc" />
+  </path>
+
+  <path name="call-m1-mic" >
+      <path name="init" />
+      <path name="call-main-aux-mic" />
+      <path name="call_in_without_BT" />
+  </path>
+
+  <path name="call-m1-handfree-mic" >
+      <path name="init" />
+      <path name="call-handfree-main-aux-mic" />
+      <path name="call_in_without_BT" />
+  </path>
+
+  <path name="call-m1-headset-mic" >
+      <path name="init" />
+      <path name="call-headset-mic" />
+      <path name="call_in_without_BT" />
+  </path>
+
+  <path name="call-wb-m1-mic" >
+      <path name="init" />
+      <path name="call-main-aux-mic" />
+      <path name="wb_call_in_without_BT" />
+  </path>
+
+  <path name="call-wb-m1-handfree-mic" >
+      <path name="init" />
+      <path name="call-handfree-main-aux-mic" />
+      <path name="wb_call_in_without_BT" />
+  </path>
+
+  <path name="call-wb-m1-headset-mic" >
+      <path name="init" />
+      <path name="call-headset-mic" />
+      <path name="wb_call_in_without_BT" />
+  </path>
+
+  <path name="call-swb-m1-mic" >
+      <path name="init" />
+      <path name="call-main-aux-mic" />
+      <path name="swb_call_in_without_BT" />
+  </path>
+
+  <path name="call-swb-m1-handfree-mic" >
+      <path name="init" />
+      <path name="call-handfree-main-aux-mic" />
+      <path name="swb_call_in_without_BT" />
+  </path>
+
+  <path name="call-swb-m1-headset-mic" >
+      <path name="init" />
+      <path name="call-headset-mic" />
+      <path name="swb_call_in_without_BT" />
+  </path>
+
+</mixer>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="GB2312"?>
+<PPConfig>
+	<Mode name="davinci_front" switcher="1" >
+		<PPAlgo name="davincidsp" />
+	</Mode>
+	<Mode name="davinci_rear" switcher="1" >
+		<PPAlgo name="davincidsp" />
+	</Mode>
+	<Mode name="colorfusion" switcher="0" >
+		<PPAlgo name="hwaxymap" />
+		<PPAlgo name="colorfusiondsp" />
+		<PPAlgo name="davincidsp" />
+	</Mode>
+	<!-- Every Snapshot can be configured as ON or OFF. -->
+	<!-- Every Snapshot can have one or more algothirms(PPAlgo). -->
+	<!-- Algo order is important. -->
+	<!-- If the order is Davinci and HDR, then every frame will be denoised by Davinci algothirm firstly, then HDR. -->
+	<!-- If the order is HDR and Davinci, then HDR firstly, the result frame will be denoised by Davinci. -->
+	<Mode name="hdr" switcher="1">
+		<PPAlgo name="hdrdsp" />
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="sr" />
+	</Mode>
+	<Mode name="jpghdr" switcher="0">
+		<PPAlgo name="JpegHdrdsp" />
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="sr" />
+	</Mode>
+	<Mode name="smart_hdr_rear" switcher="1">
+		<PPAlgo name="hdrdsp" />
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="sr" />
+	</Mode>
+	<Mode name="smart_hdr_front" switcher="1">
+		<PPAlgo name="ctdetect" />
+		<PPAlgo name="frontbokehmask" />
+		<PPAlgo name="hdrdsp" />
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="ldc" />
+	</Mode>
+	<Mode name="digitalzoom" switcher="1">
+		<PPAlgo name="digitalzoom" />
+	</Mode>
+	<Mode name="multidenoise" switcher="1">
+		<PPAlgo name="multidenoise" />
+	</Mode>
+	<Mode name="multiexpofusion" switcher="0">
+		<PPAlgo name="hwaxymap" />
+		<PPAlgo name="mefdsp" />
+	</Mode>
+	<Mode name="burstshot" switcher="1">
+	</Mode>
+	<Mode name="bestshot" switcher="1">
+		<PPAlgo name="bestshot" />
+	</Mode>
+	<Mode name="beauty_front_extisp" switcher="0">
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="ldc" />
+		<PPAlgo name="davincidsp" />
+	</Mode>
+	<Mode name="beauty_front_noneextisp" switcher="1">
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="arcsoft_faceoutline" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+	</Mode>
+	<Mode name="beauty_rear_extisp" switcher="0">
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="davincidsp" />
+	</Mode>
+	<Mode name="beauty_rear_noneextisp" switcher="1">
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+	</Mode>
+	<Mode name="edof" switcher="1">
+		<PPAlgo name="davinci" />
+		<PPAlgo name="refocus" />
+	</Mode>
+	<Mode name="edof_hidden" switcher="1">
+		<PPAlgo name="davinci" />
+	</Mode>
+	<Mode name="self_portrait_noface" switcher="0">
+		<PPAlgo name="davinci" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+	</Mode>
+	<Mode name="self_portrait" switcher="1">
+		<PPAlgo name="davinci" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="refocus" />
+	</Mode>
+	<Mode name="fairlight_rear" switcher="1">
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="fairlight" />
+	</Mode>
+	<Mode name="fairlight_front" switcher="1">
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="fairlight" />
+	</Mode>
+	<Mode name="fairlight_frontbokeh" switcher="1">
+		<PPAlgo name="ctdetect" />
+		<PPAlgo name="frontbokehmask" />
+		<PPAlgo name="frontbokeh" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="fairlight" />
+	</Mode>
+	<Mode name="fairlight_opticalzoom" switcher="0">
+		<PPAlgo name="hwaxymap" />
+		<PPAlgo name="opticalzoomdsp" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="fairlight" />
+	</Mode>
+	<Mode name="fairlight_self_portrait" switcher="1">
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="refocus" />
+		<PPAlgo name="fairlight" />
+	</Mode>
+	<Mode name="frontbokeh_beauty" switcher="1">
+		<PPAlgo name="ctdetect" />
+		<PPAlgo name="frontbokehmask" />
+		<PPAlgo name="frontbokeh" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+	</Mode>
+	<Mode name="sr" switcher="0">
+	</Mode>
+	<Mode name="fastshot" switcher="0">
+		<PPAlgo name="sr" />
+	</Mode>
+	<Mode name="allfocus" switcher="0">
+		<PPAlgo name="allfocus" />
+	</Mode>
+	<Mode name="calib" switcher="0" >
+		<PPAlgo name="calibinfo" />
+		<PPAlgo name="formatconvert" />
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="formatconvert" />
+	</Mode>
+	<Mode name="macro" switcher="0">
+		<PPAlgo name="sr" />
+	</Mode>
+	<Mode name="beauty_multidenoise" switcher="1">
+		<PPAlgo name="multidenoise" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+	</Mode>
+	<Mode name="beauty_multidenoise_front" switcher="1">
+		<PPAlgo name="multidenoise" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+	</Mode>
+	<Mode name="beauty_hdr_rear" switcher="1">
+		<PPAlgo name="hdrdsp" />
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="sr" />
+	</Mode>
+	<Mode name="beauty_hdr_front" switcher="1">
+		<PPAlgo name="ctdetect" />
+		<PPAlgo name="frontbokehmask" />
+		<PPAlgo name="hdrdsp" />
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="ldc" />
+	</Mode>
+	<!-- Need open niceFoodAlgo for EMUI5 -->
+	<Mode name="nicefood" switcher="1">
+		<PPAlgo name="NiceFoodPpAlgo" />
+		<PPAlgo name="davincidsp" />
+	</Mode>
+	<Mode name="mono" switcher="0">
+		<PPAlgo name="davincidsp" />
+	</Mode>
+	<Mode name="monofilter" switcher="0">
+		<PPAlgo name="davincidsp" />
+	</Mode>
+	<Mode name="bshutter" switcher="1">
+		<PPAlgo name="pp_bshutter" />
+	</Mode>
+	<Mode name="HDFlash" switcher="1">
+		<PPAlgo name="HDFlashDspPpAlgo" />
+		<PPAlgo name="davincidsp" />
+		<PPAlgo name="sr" />
+	</Mode>
+	<Mode name="laserFOVCali" switcher="0">
+		<PPAlgo name="laserfovcalib" />
+	</Mode>
+	<Mode name="hdccalib" switcher="1">
+		<PPAlgo name="HdcCalibPpAlgo" />
+	</Mode>
+	<Mode name="dcmmi" switcher="1">
+		<PPAlgo name="DCMMIPpAlgo" />
+	</Mode>
+	<Mode name="oisvcmcalib" switcher="0">
+		<PPAlgo name="OisVcmCalibPpAlgo" />
+	</Mode>
+	<Mode name="sdkdepthcalc" switcher="0">
+		<PPAlgo name="dualdepth" />
+	</Mode>
+	<Mode name="opticalzoomnornal" switcher="0">
+		<PPAlgo name="hwaxymap" />
+		<PPAlgo name="opticalzoomdsp" />
+	</Mode>
+	<Mode name="opticalzoombeauty" switcher="0">
+		<PPAlgo name="hwaxymap" />
+		<PPAlgo name="opticalzoomdsp" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+	</Mode>
+	<Mode name="opticalzoombokeh" switcher="0">
+		<PPAlgo name="hwaxymap" />
+		<PPAlgo name="digitalzoom" />
+		<PPAlgo name="sr" />
+		<PPAlgo name="dualdepth" />
+		<PPAlgo name="davinci" />
+		<PPAlgo name="refocus" />
+	</Mode>
+	<Mode name="opticalzoombokehshelter" switcher="0">
+		<PPAlgo name="digitalzoom" />
+	</Mode>
+	<Mode name="opticalzoomselfportrait" switcher="0">
+		<PPAlgo name="hwaxymap" />
+		<PPAlgo name="sr" />
+		<PPAlgo name="dualdepth" />
+		<PPAlgo name="davinci" />
+		<PPAlgo name="HwBeautyPpAlgo" />
+		<PPAlgo name="refocus" />
+	</Mode>
+	<Mode name="foreRemosaic" switcher="0">
+	</Mode>
+	<Mode name="ircamera" switcher="0">
+		<PPAlgo name="IRCameraPpAlgo" />
+	</Mode>
+	<Mode name="smartcapture" switcher="1">
+		<PPAlgo name="segmentationmask" />
+		<PPAlgo name="SmartBeauty" />
+		<PPAlgo name="davincidsp" />
+	</Mode>
+</PPConfig>

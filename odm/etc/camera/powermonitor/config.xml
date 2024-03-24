@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GB2312"?>
+<PowerMonitorConfig>
+    <PowerMonitor enable="1"></PowerMonitor>
+    <PowerMonitor FBippenable="1"></PowerMonitor>
+    <PowerMonitor FBFaceRatio="36"></PowerMonitor>
+    <PowerMonitor FBFrameNum="6"></PowerMonitor>
+</PowerMonitorConfig>

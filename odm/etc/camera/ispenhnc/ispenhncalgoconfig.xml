@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB2312"?>
+<IspEnhncAlgoConfig>
+	<IspEnhncAlgo name="YuvCalculate" switcher="0" ></IspEnhncAlgo>
+	<IspEnhncAlgo name="AntiBanding" switcher="1" ></IspEnhncAlgo>
+	<IspEnhncAlgo name="MotionDetect" switcher="1" ></IspEnhncAlgo>
+</IspEnhncAlgoConfig>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="GB2312"?>
+<SceneRecognitionConfig>
+	<AlgoControl>
+        <algoEnable name="algoEnable" value="1" ></algoEnable>
+        <videoEnable name="videoEnable" value="0" ></videoEnable>
+        <frontEnable name="frontEnable" value="0" ></frontEnable>
+	    <version name="version" value="2" ></version>	
+        <stableFrame name="stableFrame" value="30" ></stableFrame>
+        <unstableFrame name="unstableFrame" value="30" ></unstableFrame>
+	</AlgoControl>
+	<FilterRule1.0_front>
+		<Scene name="BLUESKY" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		<Scene name="GREENPLANT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		<Scene name="FLOWER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		<Scene name="BEACH" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		<Scene name="STAGE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		<Scene name="NIGHT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		<Scene name="ROOM" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		<Scene name="SNOW" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		<Scene name="OTHER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+	</FilterRule1.0_front>
+	<FilterRule1.0>
+		 <Scene name="STAGE" inConfThd="950" outConfThd="700" inLVThd="80" outLVThd="90" condition="LE" ></Scene>
+		 <Scene name="BEACH" inConfThd="950" outConfThd="700" inLVThd="110" outLVThd="90" condition="GE" ></Scene>
+		 <Scene name="BLUESKY" inConfThd="950" outConfThd="700" inLVThd="110" outLVThd="90" condition="GE" ></Scene>
+		 <Scene name="SUNSET" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="FOOD" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="FLOWER" inConfThd="950" outConfThd="700" inLVThd="10" outLVThd="0" condition="GE" ></Scene>
+		 <Scene name="GREENPLANT" inConfThd="950" outConfThd="500" inLVThd="10" outLVThd="0" condition="GE" ></Scene>
+		 <Scene name="SNOW" inConfThd="950" outConfThd="700" inLVThd="70" outLVThd="60" condition="GE" ></Scene>
+		 <Scene name="NIGHT" inConfThd="950" outConfThd="700" inLVThd="80" outLVThd="90" condition="LE" ></Scene>
+		 <Scene name="TEXT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CAT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="DOG" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="FIREWORKS" inConfThd="950" outConfThd="700" inLVThd="80" outLVThd="90" condition="LE" ></Scene>
+		 <Scene name="OVERCAST" inConfThd="950" outConfThd="700" inLVThd="110" outLVThd="90" condition="GE" ></Scene>
+		 <Scene name="FALLEN" inConfThd="950" outConfThd="700" inLVThd="10" outLVThd="0" condition="GE" ></Scene>
+		 <Scene name="PANDA" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CAR" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="OLDBUILDINGS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BICYCLE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WATERFALL" inConfThd="950" outConfThd="700" inLVThd="70" outLVThd="60" condition="GE" ></Scene>
+		 <Scene name="NIGHTWITHSKY" inConfThd="0" outConfThd="0" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="NIGHTNOSKY" inConfThd="0" outConfThd="0" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+	</FilterRule1.0>
+	<FilterRule2.0>	
+		 <Scene name="STAGE" inConfThd="950" outConfThd="700" inLVThd="80" outLVThd="90" condition="LE" ></Scene>
+		 <Scene name="BEACH" inConfThd="950" outConfThd="700" inLVThd="110" outLVThd="90" condition="GE" ></Scene>
+		 <Scene name="BLUESKY" inConfThd="950" outConfThd="700" inLVThd="110" outLVThd="90" condition="GE" ></Scene>
+		 <Scene name="SUNSET" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="FOOD" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="FLOWER" inConfThd="950" outConfThd="700" inLVThd="10" outLVThd="0" condition="GE" ></Scene>
+		 <Scene name="GREENPLANT" inConfThd="950" outConfThd="500" inLVThd="10" outLVThd="0" condition="GE" ></Scene>
+		 <Scene name="SNOW" inConfThd="950" outConfThd="700" inLVThd="70" outLVThd="60" condition="GE" ></Scene>
+		 <Scene name="NIGHT" inConfThd="950" outConfThd="700" inLVThd="80" outLVThd="90" condition="LE" ></Scene>
+		 <Scene name="TEXT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CAT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="DOG" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="FIREWORKS" inConfThd="950" outConfThd="700" inLVThd="80" outLVThd="90" condition="LE" ></Scene>
+		 <Scene name="OVERCAST" inConfThd="950" outConfThd="700" inLVThd="110" outLVThd="90" condition="GE" ></Scene>
+		 <Scene name="FALLEN" inConfThd="950" outConfThd="700" inLVThd="10" outLVThd="0" condition="GE" ></Scene>
+		 <Scene name="PANDA" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CAR" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="OLDBUILDINGS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BICYCLE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WATERFALL" inConfThd="950" outConfThd="700" inLVThd="70" outLVThd="60" condition="GE" ></Scene>
+		 <Scene name="PLAYGROUND" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CORRIDOR" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CABIN" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WASHROOM" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="KITCHEN" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BEDROOM" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="DININGROOM" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="LIVINGROOM" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="SKYSCRAPER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>		 
+		 <Scene name="BRIDGE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WATERSIDE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="MOUNTAIN" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="OVERLOOK" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WORKSITE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="ISLAMBUILDINGS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="EUROPEANBUILDINGS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="FOOTBALLCOURT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BASEBALLCOURT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="TENNISCOURT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="INCAR" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BADMINTONCOURT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="PINGPONGCOURT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="SWIMMINGPOOL" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="ALPACA" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="LIBRARY" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="SUPERMARKET" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="RESTAURANT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="TIGER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="PENGUIN" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="ELEPHANT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="DINOSAUR" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WATERSURFACE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="INDOORBASKETBALLCOURT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BOWLINGALLEY" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CLASSROOM" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="RABBIT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="RHINOCEROS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CAMEL" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="TORTOISE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="LEOPARD" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="GIRAFFE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="PEACOCK" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="KANGAROO" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="LION" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="MOTORCYCLE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="AIRCRAFT" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="TRAIN" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="SHIP" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="GLASSES" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WATCH" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="HIGHHEELS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WASHINGMACHINE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="AIRCONDITIONER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CAMERA" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="MAP" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="KEYBOARD" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="REDENVELOPE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="FUCHARACTER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="XICHARACTER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>		 
+		 <Scene name="DRAGONDANCE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="LIONDANCE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="GO" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="TEDDYBEAR" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="TRANSFORMER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="THESMURFS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="LITTLEPONY" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BUTTERFLY" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="LADYBUG" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="DRAGONFLY" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BILLIARDROOM" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="MEETINGROOM" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="OFFICE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BAR" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="MALLCOURTYARD" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="DEER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CATHEDRALHALL" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="BEE" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="HELICOPTER" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="MAHJONG" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="CHESS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="MCDONALDS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="ORNAMENTALFISH" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		 <Scene name="WIDEBUILDINGS" inConfThd="950" outConfThd="700" inLVThd="0" outLVThd="0" condition="NULL" ></Scene>
+		</FilterRule2.0>
+</SceneRecognitionConfig>

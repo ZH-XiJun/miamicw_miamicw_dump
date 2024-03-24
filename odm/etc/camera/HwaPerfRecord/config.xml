@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Config>
+	<Enable>1</Enable>
+	<DefaultPreDisplayLag>120</DefaultPreDisplayLag>
+	<DefaultSnapDisplayLag>90</DefaultSnapDisplayLag>
+	<StatPictureWidth>3968</StatPictureWidth>
+	<StatPictureHeight>2976</StatPictureHeight>
+	<StartCameraGrade>392 441 490 539 588 637 686 735 784 833 882 931 980 1225 1715 2450</StartCameraGrade>
+	<Shot2seeGrade>120 140 160 180 200 220 240 260 280 300 320 340 360 400 480 600</Shot2seeGrade>
+	<ShutterLagGrade>-243 -216 -189 -162 -135 -108 -81 -54 -27 0 27 54 81 122 203 324</ShutterLagGrade>
+</Config>
