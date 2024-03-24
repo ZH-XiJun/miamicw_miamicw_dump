@@ -1,0 +1,127 @@
+<AppConfig>
+  <CloseNR_APPList>
+    <UidCloseNREnable>1</UidCloseNREnable>
+    <ProductList>
+      <product group="OXF-AN00">option2,option3,option4,option5,option6,option7</product>
+      <product group="WLZ-AN00">option2,option3,option4,option5,option6,option7</product>
+      <product group="OXF-AN10">option2,option3,option4,option5,option6,option7</product>
+      <product group="EVR-AN00">option2,option3,option4,option5,option6,option7</product>
+      <product group="EVR-N29">option2,option3,option4,option5,option6,option7</product>
+      <product group="TAH-AN00">option2,option3,option4,option5,option6,option7</product>
+      <product group="TAH-AN00m">option2,option3</product>
+      <product group="TAH-N29m">option2,option3</product>
+      <product group="TAS-AN00">option2,option3</product>
+      <product group="TAS-TN00">option2,option3</product>
+      <product group="TAS-N29">option2,option3</product>
+      <product group="LIO-AN00">option2,option3</product>
+      <product group="LIO-AN00P">option2,option3</product>
+      <product group="LIO-TN00">option2,option3</product>
+      <product group="LIO-N29">option2,option3</product>
+      <product group="ANA-AN00">option2,option3</product>
+      <product group="ANA-N09">option2,option3</product>
+      <product group="ANA-N29">option2,option3</product>
+      <product group="ELS-AN00">option2,option3</product>
+      <product group="ELS-AN10">option2,option3</product>
+      <product group="ELS-TN00">option2,option3</product>
+      <product group="ELS-N04">option2,option3</product>
+      <product group="ELS-N09">option2,option3</product>
+      <product group="ELS-N29">option2,option3</product>
+      <product group="ELS-N39">option2,option3</product>
+      <product group="BMH-AN10">option2,option3</product>
+      <product group="JER-AN10">option2,option3</product>
+      <product group="JER-TN10">option2,option3</product>
+      <product group="JEF-AN00">option2,option3</product>
+      <product group="JEF-TN00">option2,option3</product>
+      <product group="CDY-AN00">option2,option3</product>
+      <product group="CDY-AN90">option2,option3</product>
+      <product group="CDY-TN00">option2,option3</product>
+    </ProductList>
+    <ParamList>
+      <option group="option1">5,3,1000,5000,30,30,3</option>
+      <option group="option2">5,3,1000,5000,30,30,3</option>
+      <option group="option3">86400,1,1000000,1,30,30,30</option>
+      <option group="option4">5,3,1000,5000,30,30,3</option>
+      <option group="option5">5,3,1000,5000,30,30,3</option>
+      <option group="option6">5,3,1000,5000,30,30,3</option>
+      <option group="option7">5,3,1000,5000,30,30,3</option>
+    </ParamList>
+    <APKInfo packageName="AllSceneDisableEndc" param="option1"></APKInfo>
+    <APKInfo packageName="SavePowerDisableEndc" param="option2"></APKInfo>
+    <APKInfo packageName="com.huawei.appmarket" param="option3"></APKInfo>
+    <APKInfo packageName="com.zwanoo.android.speedtest" param="option3"></APKInfo>
+    <APKInfo packageName="com.tencent.tmgp.sgame" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.tmgp.pubgmhd" param="option4"></APKInfo>
+    <APKInfo packageName="com.happyelements.AndroidAnimal" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.tmgp.speedmobile" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.tmgp.cf" param="option4"></APKInfo>
+    <APKInfo packageName="com.qqgame.hlddz" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.KiHan" param="option4"></APKInfo>
+    <APKInfo packageName="com.blizzard.wtcg.hearthstone" param="option4"></APKInfo>
+    <APKInfo packageName="cn.jj" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.gwgo" param="option4"></APKInfo>
+    <APKInfo packageName="com.netease.onmyoji" param="option4"></APKInfo>
+    <APKInfo packageName="com.ztgame.bob" param="option4"></APKInfo>
+    <APKInfo packageName="com.netease.onmyoji.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.peng" param="option4"></APKInfo>
+    <APKInfo packageName="com.mfp.jelly.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.miHoYo.enterprise.NGHSoD" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.tmgp.supercell.clashroyale" param="option4"></APKInfo>
+    <APKInfo packageName="com.netease.dwrg.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.miHoYo.bh3.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.ig" param="option4"></APKInfo>
+    <APKInfo packageName="com.bf.sgs.hdexp.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.netease.mc.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.qqgame.happymj" param="option4"></APKInfo>
+    <APKInfo packageName="com.netease.mrzh.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.supercell.clashofclans.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="yuanqiqishi.game.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.qqgame.xq" param="option4"></APKInfo>
+    <APKInfo packageName="com.tencent.tmgp.supercell.clashofclans" param="option4"></APKInfo>
+    <APKInfo packageName="com.minitech.miniworld.huawei" param="option4"></APKInfo>
+    <APKInfo packageName="com.studiowildcard.wardrumstudios.ark" param="option4"></APKInfo>
+    <APKInfo packageName="com.t2ksports.nba2k19and" param="option4"></APKInfo>
+    <APKInfo packageName="com.zhihu.android" param="option5"></APKInfo>
+    <APKInfo packageName="com.kmxs.reader" param="option5"></APKInfo>
+    <APKInfo packageName="com.lechuan.midunovel" param="option5"></APKInfo>
+    <APKInfo packageName="com.qq.reader" param="option5"></APKInfo>
+    <APKInfo packageName="com.qidian.QDReader" param="option5"></APKInfo>
+    <APKInfo packageName="com.chaozh.iReaderFree" param="option5"></APKInfo>
+    <APKInfo packageName="com.tencent.weread" param="option5"></APKInfo>
+    <APKInfo packageName="com.qihoo.haosou.subscribe.vertical.book" param="option5"></APKInfo>
+    <APKInfo packageName="com.ushaqi.zhuishushenqi.adfree" param="option5"></APKInfo>
+    <APKInfo packageName="com.shuqi.controller" param="option5"></APKInfo>
+    <APKInfo packageName="com.jjwxc.reader" param="option5"></APKInfo>
+    <APKInfo packageName="com.handsgo.jiakao.android" param="option5"></APKInfo>
+    <APKInfo packageName="com.yuewen.cooperate.reader.free" param="option5"></APKInfo>
+    <APKInfo packageName="com.chaozh.iReader.dj" param="option5"></APKInfo>
+    <APKInfo packageName="com.alukaxi.bqshugg.blue" param="option5"></APKInfo>
+    <APKInfo packageName="com.ophone.reader.ui" param="option5"></APKInfo>
+    <APKInfo packageName="com.ushaqi.zhuishushenqi" param="option5"></APKInfo>
+    <APKInfo packageName="cc.quanben.novel" param="option5"></APKInfo>
+    <APKInfo packageName="com.qiyi.video.reader" param="option5"></APKInfo>
+    <APKInfo packageName="com.wifi.reader.free" param="option5"></APKInfo>
+    <APKInfo packageName="com.qq.ac.android" param="option5"></APKInfo>
+    <APKInfo packageName="com.flyersoft.seekbooks" param="option5"></APKInfo>
+    <APKInfo packageName="com.sogou.novel" param="option5"></APKInfo>
+    <APKInfo packageName="com.baidu.yuedu" param="option5"></APKInfo>
+    <APKInfo packageName="com.bqgmfdzs.reader" param="option5"></APKInfo>
+    <APKInfo packageName="com.huawei.hnreader" param="option5"></APKInfo>
+    <APKInfo packageName="com.nd.android.pandareader" param="option5"></APKInfo>
+    <APKInfo packageName="com.tadu.read" param="option5"></APKInfo>
+    <APKInfo packageName="com.huawei.hwireader" param="option5"></APKInfo>
+    <APKInfo packageName="com.autonavi.minimap" param="option6"></APKInfo>
+    <APKInfo packageName="com.baidu.BaiduMap" param="option6"></APKInfo>
+    <APKInfo packageName="com.sdu.didi.psnger" param="option6"></APKInfo>
+    <APKInfo packageName="com.tencent.map" param="option6"></APKInfo>
+    <APKInfo packageName="com.didapinche.booking" param="option6"></APKInfo>
+    <APKInfo packageName="com.jingyao.easybike" param="option6"></APKInfo>
+    <APKInfo packageName="com.ovital.ovitalMap" param="option6"></APKInfo>
+    <APKInfo packageName="com.ygkj.chelaile.standard" param="option6"></APKInfo>
+    <APKInfo packageName="com.mygolbs.mybus" param="option6"></APKInfo>
+    <APKInfo packageName="com.google.android.apps.maps" param="option6"></APKInfo>
+    <APKInfo packageName="com.sina.weibo" param="option7"></APKInfo>
+    <APKInfo packageName="com.ss.android.article.news" param="option7"></APKInfo>
+    <APKInfo packageName="com.tencent.mm" param="option7"></APKInfo>
+    <APKInfo packageName="com.tencent.mobileqq" param="option7"></APKInfo>
+  </CloseNR_APPList>
+</AppConfig>

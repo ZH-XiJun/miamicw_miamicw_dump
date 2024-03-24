@@ -1,0 +1,4 @@
+service bms_fw /vendor/bin/bms_fw
+    user system
+    group system
+    disabled

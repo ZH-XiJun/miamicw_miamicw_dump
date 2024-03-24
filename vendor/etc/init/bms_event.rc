@@ -1,0 +1,27 @@
+on late-fs
+    chmod 0440 /sys/devices/virtual/hw_power/power_event/connect_state
+    chown system system /sys/devices/virtual/hw_power/power_event/connect_state
+
+    start bms_event
+
+service bms_event /vendor/bin/bms_event
+    user system
+    group system
+    disabled
+
+on property:vendor.bms_event=init
+    start bms_heating
+
+on property:vendor.bms_event=start
+    start usb_port
+    start bms_auth
+    start bms_heating
+    start bms_soc
+    start bms_limit
+
+on property:vendor.bms_event=stop
+    stop usb_port
+    stop bms_auth
+    stop bms_heating
+    stop bms_soc
+    stop bms_limit

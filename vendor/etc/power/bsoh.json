@@ -1,0 +1,504 @@
+{
+  "Estimators": {
+    "CVT":{
+      "Battery": [
+        {
+          "Name": "Battery1",
+          "Model": "all",
+          "Country": "all",
+          "JudgeEnable": 1,
+          "PolicyEnable": 0,
+          "FaultPoint": 100,
+          "CalculateCount": 20,
+          "ErrorCount": 4,
+          "ErrorValue": 1200,
+          "TempSlope": "Para1.0",
+          "ChargeCycleMax": 20,
+          "ChargeSocMin": 80,
+          "TempMin": 10,
+          "TempMax": 45,
+          "ValidValueMin": 600,
+          "ValidValueMax": 2400,
+          "BeginCurMin": 485,
+          "BeginCurMax": 505,
+          "EndCurMin": 185,
+          "EndCurMax": 205,
+          "Ratio": [1340, 1200, 1090, 1000, 940, 890, 850, 810],
+          "Temp": [10, 15, 20, 25, 30, 35, 40, 45]
+        }
+      ]
+    },
+    "CFSD": {
+      "Battery": [
+        {
+          "Name": "Battery1",
+          "Model": "all",
+          "Country": "all"
+        }
+      ]
+    },
+    "EIS": {
+      "Version": "1.0.0",
+      "Monitors": {
+        "thread0": {
+          "/sys/devices/virtual/hw_power/soh/soh_data/acr_raw": 0,
+          "/sys/devices/virtual/hw_power/soh/soh_data/dcr_raw": 1
+        }
+      },
+      "Parameters": {
+        "Recorder": {
+          "setSize": 40,
+          "rawSize": 100,
+          "version": 0
+        },
+        "Unifier0": {
+          "type": "none"
+        },
+        "Judge0": {
+          "type": "none"
+        }
+      }
+    },
+    "BASP": {
+      "Protectors": [
+        "DcVoltLimitator",
+        "NonDcVoltLimitator",
+        "DcCurLimitator",
+        "NonDcCurLimitator"
+      ],
+      "Battery": [
+        {
+          "Name": "Battery1",
+          "Model":"all",
+          "Country":"all",
+          "BaspPolicy": "2.02",
+          "IChargerMax": 8000
+        }
+      ],
+      "2.02": [
+        {
+          "Level": 4,
+          "Cycles": 100000,
+          "FccRatio": 70,
+          "Logical": 0,
+          "DcVoltDec": 100,
+          "NonDcVoltDec": 96,
+          "CurrentRatio": 70,
+          "CurrentPolicy": 1,
+          "CurrentRefer": 1,
+          "ErrNo": 920001032
+        },
+        {
+          "Level": 3,
+          "Cycles": 70000,
+          "FccRatio": 80,
+          "Logical": 1,
+          "DcVoltDec": 50,
+          "NonDcVoltDec": 48,
+          "CurrentRatio": 80,
+          "CurrentPolicy": 1,
+          "CurrentRefer": 1,
+          "ErrNo": 920001031
+        },
+        {
+          "Level": 2,
+          "Cycles": 40000,
+          "FccRatio": 88,
+          "Logical": 1,
+          "DcVoltDec": 40,
+          "NonDcVoltDec": 32,
+          "CurrentRatio": 90,
+          "CurrentPolicy": 1,
+          "CurrentRefer": 1,
+          "ErrNo": 920001029
+        },
+        {
+          "Level": 1,
+          "Cycles": 20000,
+          "FccRatio": 100,
+          "Logical": 2,
+          "DcVoltDec": 20,
+          "NonDcVoltDec": 16,
+          "CurrentRatio": 90,
+          "CurrentPolicy": 1,
+          "CurrentRefer": 1,
+          "ErrNo": 920001037
+        },
+        {
+          "Level": 0,
+          "Cycles": 0,
+          "FccRatio": 100,
+          "Logical": 0,
+          "DcVoltDec": 0,
+          "NonDcVoltDec": 0,
+          "CurrentRatio": 100,
+          "CurrentPolicy": 0,
+          "CurrentRefer": 1,
+          "ErrNo": 0
+        }
+      ]
+    },
+    "ASW":{
+      "Protectors": [
+        "DcVoltLimitator",
+        "NonDcVoltLimitator",
+        "SocLimitator"
+      ],
+      "Battery": [
+        {
+          "Name": "Battery1",
+          "Model": "murata",
+          "Country": "all",
+          "SwellTabe": "Swell1.0",
+          "AswPolicy": "3.00",
+          "SimSupport": 1,
+          "NormalSceneDmdNo": 920001098
+        },
+        {
+          "Name": "Battery1",
+          "Model": "all",
+          "Country": "all",
+          "SwellTabe": "Swell1.1",
+          "AswPolicy": "3.00",
+          "SimSupport": 1,
+          "NormalSceneDmdNo": 920001098
+        }
+      ],
+      "Swell1.0": {
+        "Vbat": [4100, 4200, 4300, 4350, 4400],
+        "Temp": [30, 35, 40, 45, 50],
+        "Table": [
+          [0.00058, 0.00118, 0.00305, 0.00582, 0.00718, 0.00745],
+          [0.00080, 0.00170, 0.00485, 0.00844, 0.01001, 0.01029],
+          [0.00141, 0.00299, 0.00854, 0.01487, 0.01762, 0.01811],
+          [0.00248, 0.00526, 0.01502, 0.02616, 0.03102, 0.03187],
+          [0.00436, 0.00925, 0.02643, 0.04603, 0.05457, 0.05608],
+          [0.00768, 0.01627, 0.04649, 0.08096, 0.09599, 0.09865]
+        ]
+      },
+      "Swell1.1": {
+        "Vbat": [4100, 4200, 4300, 4350, 4400],
+        "Temp": [30, 35, 40, 45, 50],
+        "Table": [
+          [0.00029, 0.00059, 0.00169, 0.00271, 0.00447, 0.00820],
+          [0.00040, 0.00085, 0.00269, 0.00394, 0.00623, 0.01132],
+          [0.00071, 0.00150, 0.00474, 0.00694, 0.01096, 0.01992],
+          [0.00124, 0.00263, 0.00834, 0.01221, 0.01930, 0.03506],
+          [0.00218, 0.00463, 0.01467, 0.02148, 0.03395, 0.06169],
+          [0.00384, 0.00814, 0.02580, 0.03778, 0.05973, 0.10852]
+        ]
+      },
+      "3.00": [
+        {
+          "Name": "H1",
+          "No": 1,
+          "CutoffSoc": 80,
+          "RestoreSoc": 75,
+          "VbatLlimit": 4200,
+          "DmdNo": 920001096,
+          "Condtion": [
+            {
+              "GroupNo": 1,
+              "ProtectEnable": 0,
+              "EntryObjType": 0,
+              "ExitObjType": 1,
+              "Entry": {
+                "Sim": 1,
+                "Psim_in": [10, 100],
+                "Pusb_in": [60, 100]
+              },
+              "Exit": [
+                {
+                  "Tusb_out": [57600, 8000000]
+                }
+              ]
+            },
+            {
+              "GroupNo": 2,
+              "ProtectEnable": 1,
+              "EntryObjType": 0,
+              "ExitObjType": 1,
+              "Entry": {
+                "Sim":0,
+                "Pusb_in": [60, 100]
+              },
+              "Exit": [
+                {
+                  "Tusb_out": [57600, 8000000]
+                }
+              ]
+            },
+            {
+              "GroupNo": 3,
+              "ProtectEnable": 1,
+              "EntryObjType": 0,
+              "ExitObjType": 1,
+              "Entry": {
+                "Sim": 1,
+                "Psim_in": [0, 10],
+                "Pusb_in": [40, 100]
+              },
+              "Exit": [
+                {
+                  "Tusb_out": [57600, 8000000]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Name": "H5",
+          "No": 5,
+          "DcVoltDec": 100,
+          "NoDcVoltDec": 100,
+          "VbatLlimit": 4200,
+          "DmdNo": 920001205,
+          "Condtion": [
+            {
+              "GroupNo": 1,
+              "ProtectEnable": 0,
+              "EntryObjType": 1,
+              "ExitObjType": 1,
+              "Entry": {
+                "Aswell": [4.6, 10],
+                "CycCurrent": [700, 3000]
+              }
+            }
+          ]
+        },
+        {
+          "Name": "H2",
+          "No": 2,
+          "DcVoltDec": 100,
+          "NoDcVoltDec": 100,
+          "VbatLlimit": 4200,
+          "DmdNo": 920001097,
+          "Condtion": [
+            {
+              "GroupNo": 1,
+              "ProtectEnable": 0,
+              "EntryObjType": 0,
+              "ExitObjType": 1,
+              "Entry": {
+                "Sim": 1,
+                "Psim_in": [10, 100],
+                "Pusb_in": [30, 60],
+                "Pvbat_ov": [80, 100]
+              },
+              "Exit": [
+                {
+                  "Tusb_out": [57600, 8000000]
+                }
+              ]
+            },
+            {
+              "GroupNo": 2,
+              "ProtectEnable": 1,
+              "EntryObjType": 0,
+              "ExitObjType": 1,
+              "Entry": {
+                "Sim": 0,
+                "Pusb_in": [30, 60],
+                "Pvbat_ov": [80, 100]
+              },
+              "Exit": [
+                {
+                  "Tusb_out": [57600, 8000000]
+                }
+              ]
+            },
+            {
+              "GroupNo": 3,
+              "ProtectEnable": 1,
+              "EntryObjType": 0,
+              "ExitObjType": 1,
+              "Entry": {
+                "Sim": 1,
+                "Psim_in": [0, 10],
+                "Pusb_in": [30, 40],
+                "Pvbat_ov": [80, 100]
+              },
+              "Exit": [
+                {
+                  "Tusb_out": [57600, 8000000]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Name": "H4",
+          "No": 4,
+          "DcVoltDec": 100,
+          "NoDcVoltDec": 100,
+          "VbatLlimit": 4200,
+          "DmdNo": 920001204,
+          "Condtion": [
+            {
+              "GroupNo": 1,
+              "ProtectEnable": 1,
+              "EntryObjType": 1,
+              "ExitObjType": 1,
+              "Entry": {
+                "Aswell": [3.6, 4.6],
+                "CycCurrent": [700, 3000]
+              }
+            }
+          ]
+        },
+        {
+          "Name": "H3",
+          "No": 3,
+          "DcVoltDec": 50,
+          "NoDcVoltDec": 50,
+          "VbatLlimit": 4200,
+          "DmdNo": 920001203,
+          "Condtion": [
+            {
+              "GroupNo": 1,
+              "ProtectEnable": 1,
+              "EntryObjType": 1,
+              "ExitObjType": 1,
+              "Entry": {
+                "Aswell": [2.2, 3.6],
+                "CycCurrent": [300, 700]
+              }
+            }
+          ]
+        },
+        {
+          "Name": "H6",
+          "No": 6,
+          "DcVoltDec": 50,
+          "NoDcVoltDec": 50,
+          "VbatLlimit": 4200,
+          "DmdNo": 920001206,
+          "Condtion": [
+            {
+              "GroupNo": 1,
+              "ProtectEnable": 0,
+              "EntryObjType": 0,
+              "ExitObjType": 0,
+              "Entry": {
+                "Aswell": [0.049, 0.5]
+              },
+              "Exit": [
+                {
+                  "Aswell": [0, 0.044]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "ISCD": {
+      "Protectors": [
+        "SocLimitator"
+      ],
+      "Battery":[
+        {
+          "Name": "Battery1",
+          "IscdParameter": "Parameter1.0"
+        }
+      ],
+      "Parameter1.0":{
+        "IscdTstep": 3600,
+        "IscdValidOcvLevel": 3,
+        "IscdEnable": 1,
+        "IscdOcvMin": 4000000,
+        "IscdBattTempMin": 100,
+        "IscdBattTempMax": 500,
+        "IscdBattTempDiffMax": 100,
+        "IscdSampleTimeInterval": 600,
+        "IscdSampleTimeDelay": 10,
+        "IscdCalcTimeIntervalMin": 3600,
+        "IscdCalcTimeIntervalMax": 21600,
+        "IscdLevelWarningThrehold": 10000,
+        "IscdLevelErrorThrehold": 30000,
+        "IscdLevelCriticalThrehold": 100000,
+        "IscdOcvUpdateInterval": 7200,
+        "IscdDelayCyclesEnable": 0,
+        "IscdChrgDelayCycles": 0,
+        "IscdValidCycles": 10,
+        "FatalIscRechargeSocLimit": 55,
+        "FatalIscUpSocLimit": 60,
+        "FatalIscTriggerType": 1,
+        "FatalIscDeadline": 15,
+        "IscLevelConfig": "Level1.0",
+        "FatalIscTrigger": "Trigger1.0",
+        "FatalIscProtectionAction": "Switch1.0"
+      },
+      "Level1.0":[
+        {
+          "IscMin": 0,
+          "IscMax": 20000,
+          "TMin": 24,
+          "IscValidCnt": 1,
+          "DsmErrNo": 0
+        },
+        {
+          "IscMin": 20000,
+          "IscMax": 30000,
+          "TMin": 4,
+          "IscValidCnt": 3,
+          "DsmErrNo": 0
+        },
+        {
+          "IscMin": 30000,
+          "IscMax": 50000,
+          "TMin": 3,
+          "IscValidCnt": 3,
+          "DsmErrNo": 920001078
+        },
+        {
+          "IscMin": 50000,
+          "IscMax": 100000,
+          "TMin": 2,
+          "IscValidCnt": 2,
+          "DsmErrNo": 920001078
+        },
+        {
+          "IscMin": 100000,
+          "IscMax": 9999999,
+          "TMin": 1,
+          "IscValidCnt": 1,
+          "DsmErrNo": 920001078
+        }
+      ],
+      "Trigger1.0": [
+        {
+          "TriggerIscMin": 30000,
+          "TriggerIscMax": 50000,
+          "TriggerNum": 3,
+          "DsmErrNo": 920001078
+        },
+        {
+          "TriggerIscMin": 50000,
+          "TriggerIscMax": 100000,
+          "TriggerNum": 2,
+          "DsmErrNo": 920001078
+        },
+        {
+          "TriggerIscMin": 100000,
+          "TriggerIscMax": 9999999,
+          "TriggerNum": 1,
+          "DsmErrNo": 920001078
+        }
+      ],
+      "Switch1.0":{
+          "UploadDmdAction": 1,
+          "UploadUeventAction": 0,
+          "SocControlAction": 0,
+          "OcvUpdateAction": 0
+      }
+    }
+  },
+  "Protectors": {
+    "DcVoltLimitator": {},
+    "NonDcVoltLimitator": {},
+    "DcCurLimitator": {},
+    "NonDcCurLimitator": {},
+    "SocLimitator": {}
+  }
+}

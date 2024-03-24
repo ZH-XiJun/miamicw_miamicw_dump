@@ -1,0 +1,4 @@
+version=1.10.18.109
+type=CELLULAR_CLOUD
+subtype=EMUI9
+compatibleVersion=1

@@ -1,0 +1,34 @@
+on late-fs
+    chmod 0660 /sys/class/hw_power/interface/hota_iin_limit
+    chown system system /sys/class/hw_power/interface/hota_iin_limit
+    chmod 0660 /sys/class/hw_power/interface/startup_iin_limit
+    chown system system /sys/class/hw_power/interface/startup_iin_limit
+    chmod 0660 /sys/class/hw_power/interface/iin_limit
+    chown system system /sys/class/hw_power/interface/iin_limit
+
+on property:sys.bms_limit_mode=hota
+    start bms_limit_h
+
+on property:sys.bms_limit_mode=normal
+    start bms_limit_n
+
+on property:sys.boot_completed=1
+    write /sys/class/hw_power/interface/iin_limit "bms_limit all 0"
+
+service bms_limit /vendor/bin/bms_limit
+    user system
+    group system
+    disabled
+    oneshot
+
+service bms_limit_h /vendor/bin/bms_limit -m 1
+    user system
+    group system
+    disabled
+    oneshot
+
+service bms_limit_n /vendor/bin/bms_limit -m 2
+    user system
+    group system
+    disabled
+    oneshot

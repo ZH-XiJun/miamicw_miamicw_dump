@@ -1,0 +1,5 @@
+service motion-hal-1-0 /vendor/bin/hw/vendor.huawei.hardware.motion@1.0-service
+    class late_start
+    user system
+    group system readproc
+    oneshot
