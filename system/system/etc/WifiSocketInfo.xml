@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item item_name="wifi_info" >
+        <config config_name="wifi_ssid-01" config_value="Longcheer-nick-01"/>
+        <config config_name="wifi_ssid" config_value="Longcheer-nick"/>
+        <config config_name="wifi_ssid_mt" config_value="Longcheer-nick"/>
+        <config config_name="wifi_ssid_upt" config_value="Longcheer-nick"/>
+        <config config_name="wifi_ssid_itc_audio" config_value="Longcheer-nick"/>
+        <config config_name="wifi_ssid_itc_camera" config_value="Longcheer-nick-camera"/>
+        <config config_name="wifi_ssid_itc_camera_01" config_value="Longcheer-nick-camera_01"/>
+        <config config_name="wifi_ssid_itc_camera_02" config_value="Longcheer-nick-camera_02"/>
+        <config config_name="wifi_ssid_ut01" config_value="Longcheer-nick-ut01"/>
+        <config config_name="wifi_ssid_ut02" config_value="Longcheer-nick-ut02"/>
+        <config config_name="wifi_pwd" config_value="lct@wifi123"/>
+        <config config_name="socket_port" config_value="8889"/>
+        <config config_name="socket_port_app" config_value="8887"/>
+    </item>
+</resources>

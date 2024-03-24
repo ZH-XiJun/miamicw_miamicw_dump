@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config hashvalue="34a488fc5895378dbd15bfcfc9cffa33">
+  <dict>
+    <!--2019-05-16 14:43:30.0-->
+    <bool key="carrier_cust_viwifi_disable">true</bool>
+    <!--2019-04-26 15:21:45.0-->
+    <bool key="editable_wfc_roaming_mode_bool">true</bool>
+  </dict>
+</config>

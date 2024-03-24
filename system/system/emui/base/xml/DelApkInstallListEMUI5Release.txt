@@ -1,0 +1,2 @@
+/system/app/ZhiFuBao_Alipay/ZhiFuBao_Alipay.apk
+/system/app/VoiceAssistant_Baidu/VoiceAssistant_Baidu.apk

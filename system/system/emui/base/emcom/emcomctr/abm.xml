@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- switch value:0-off,1-on -->
+<abm version="001.001" thermalLevel="3">
+    <region name="CN">
+        <product name="JAD-AN">
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="NOP"> <!-- Mate40Pro+/Mate40RS, kirin9000 -->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="NOH"> <!-- Mate40Pro, kirin9000 -->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="OCE"> <!-- Mate40, kirin9000E -->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="BRQ"> <!-- Nova8Pro, kirin985-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="ANG"> <!-- Nova8, kirin985-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="ELS"> <!-- P40Pro+/P40Pro, kirin990-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="ANA"> <!-- P40, kirin990-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="TAH"> <!-- MateXs/MateX, kirin990-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="LIO"> <!-- Mate30Pro/Mate30RS/Mate30EPro, kirin990/990E-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+        <product name="TAS"> <!-- Mate30, kirin990-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>1</switch>
+            </app>
+        </product>
+    </region>
+    <region name="default">
+        <product name="JAD-AN">
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="NOP"> <!-- Mate40Pro+/Mate40RS, kirin9000 -->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="NOH"> <!-- Mate40Pro, kirin9000 -->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="OCE"> <!-- Mate40, kirin9000E -->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="BRQ"> <!-- Nova8Pro, kirin985-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="ANG"> <!-- Nova8, kirin985-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="ELS"> <!-- P40Pro+/P40Pro, kirin990-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="ANA"> <!-- P40, kirin990-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="TAH"> <!-- MateXs/MateX, kirin990-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="LIO"> <!-- Mate30Pro/Mate30RS/Mate30EPro, kirin990/990E-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+        <product name="TAS"> <!-- Mate30, kirin990-->
+            <app name="com.hicloud.android.clone">
+                <switch>0</switch>
+            </app>
+            <app name="com.huawei.nearby">
+                <switch>0</switch>
+            </app>
+        </product>
+    </region>
+</abm>
+

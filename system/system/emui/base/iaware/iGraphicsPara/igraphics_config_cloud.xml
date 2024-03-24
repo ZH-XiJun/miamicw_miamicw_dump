@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<igfx_config version="16">
+    <igfx_app_list>
+        <igfx name="com.tencent.tmgp.pubgmhd" version="117" dHApMo="true"/>
+        <igfx name="com.tencent.tmgp.projectg" version="117" dHApMo="true"/>
+    </igfx_app_list>
+</igfx_config>

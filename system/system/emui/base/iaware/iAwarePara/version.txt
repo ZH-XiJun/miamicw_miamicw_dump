@@ -1,0 +1,6 @@
+version=1.10.19.100
+type=iAwarePara
+subtype=generic
+compatibleVersion=1
+classify=1
+displayVersion=AW.GENC.1.10.19.100

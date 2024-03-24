@@ -1,0 +1,64 @@
+# 2019-03-15 08:35:09.0
+ro.camera.sound.not_forced=true
+# 2019-04-18 23:03:52.0
+ro.config.dataoff_timeout=5
+# 2019-03-15 08:35:09.0
+ro.config.enable_rms=true
+# 2019-05-30 19:43:40.0
+ro.config.hicall=true
+# 2019-05-07 10:59:58.0
+ro.config.hw_aqv_enabled=false
+# 2019-03-15 08:35:09.0
+#ro.config.hw_ecclist_nocard=+120,+122
+# 2019-03-15 08:35:09.0
+#ro.config.hw_ecclist_withcard=+112
+# 2019-03-15 08:35:09.0
+#ro.config.hw_fake_ecc_list=110,120,122,999,119
+# 2019-03-15 08:35:09.0
+ro.config.hw_globalEcc=true
+# 2019-03-15 08:35:09.0
+ro.config.hw_nlp=com.huawei.lbs
+# 2019-03-15 08:35:09.0
+ro.config.hw_optb=156
+# 2019-03-15 08:35:09.0
+ro.config.hw_updateCotaPara=true
+# 2019-03-15 08:35:09.0
+ro.config.music_region=lowfreq
+# 2019-03-15 08:35:09.0
+ro.config.permanent_error_heal=true
+# 2019-03-15 08:35:09.0
+ro.config.pre_dns_query=true
+# 2019-04-23 19:24:52.0
+ro.config.support_doubletap_pay=true
+# 2019-03-15 08:35:09.0
+ro.config.support_iseapp=true
+# 2019-03-15 08:35:09.0
+ro.config.support_privacyspace=true
+# 2019-03-15 08:35:09.0
+ro.hw.ipv6opt=true
+# 2019-03-15 08:35:09.0
+ro.hw.sub1_disable_switch_cs=true
+# 2019-03-15 08:35:09.0
+ro.odm.cdma.dormancy.mode=1
+# 2019-03-15 08:35:09.0
+ro.odm.cdma.dormancy.screen=3
+# 2019-03-15 08:35:09.0
+ro.odm.gsm.fastdormancy.mode=3
+# 2019-03-15 08:35:09.0
+ro.odm.gsm.fd.screen=2
+# 2019-03-15 08:35:09.0
+ro.odm.gsm.fd.time_scroff=4000
+# 2019-03-15 08:35:09.0
+ro.odm.high_priority_data_mode=true
+# 2019-03-15 08:35:09.0
+ro.odm.smart_dual_card=true
+# 2019-03-15 08:35:09.0
+ro.product.locale=zh-Hans-CN
+# 2019-03-15 08:35:09.0
+ro.product.locale.language=zh
+# 2019-03-15 08:35:09.0
+ro.product.locale.region=CN
+# 2019-03-15 08:35:09.0
+ro.setupwizard.mode=DISABLED
+# 2019-03-15 08:35:09.0
+ro.sys.ping_bf_dorecovery=true

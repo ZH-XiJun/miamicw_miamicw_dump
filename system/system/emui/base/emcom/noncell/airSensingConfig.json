@@ -1,0 +1,96 @@
+{
+    "WGR" : {
+        "StateMonitorConfig" : {
+            "absoluteStillnessThreshold" : 0.04,
+            "stationaryThreshold" : 0.4,
+            "sampleNumberOfStationary" : 25,
+            "movementMinThreshold" : 20,
+            "movementThreshold" : 25,
+            "timeThreshold" : 8,
+            "jerkThreshold" : 50000,
+            "perfectMovementSupport" : 1,
+            "rotationSdThreshold" : 0.2,
+            "screenOffSupport" : 0,
+            "audioRecordingSupport" : 0,
+            "audioRecognitionSupport" : 0,
+            "extendThreshold" : 0
+        },
+        "PadInfo" : {
+                "micGain" : 3,
+                "uprightMicUpMicOne" : 1,
+                "uprightMicUpMicTwo" : 3,
+                "uprightMicRightMicOne" : 1,
+                "uprightMicRightMicTwo" : 3,
+                "uprightMicBottomMicOne" : 1,
+                "uprightMicBottomMicTwo" : 3,
+                "uprightMicLeftMicOne" : 1,
+                "uprightMicLeftMicTwo" : 3,
+                "flatMicOne" : 1,
+                "flatMicTwo" : 3,
+                "uprightMicUpLeftBound" : -24,
+                "uprightMicUpRightBound" : 10,
+                "uprightMicRightLeftBound" : -19,
+                "uprightMicRightRightBound" : 18,
+                "uprightMicBottomLeftBound" : -13,
+                "uprightMicBottomRightBound" : 13,
+                "uprightMicLeftLeftBound" : -23,
+                "uprightMicLeftRightBound" : 9,
+                "flatMicLeftBound" : -20,
+                "flatMicRightBound" : 11
+        }
+    },
+    "MRR" : {
+        "StateMonitorConfig" : {
+            "absoluteStillnessThreshold" : 0,
+            "stationaryThreshold" : 0.3,
+            "sampleNumberOfStationary" : 25,
+            "movementMinThreshold" : 20,
+            "movementThreshold" : 25,
+            "timeThreshold" : 8,
+            "jerkThreshold" : 50000,
+            "perfectMovementSupport" : 1,
+            "rotationSdThreshold" : 0.2,
+            "screenOffSupport" : 0,
+            "audioRecordingSupport" : 0,
+            "audioRecognitionSupport" : 0,
+            "extendThreshold" : 0
+        },
+        "PadInfo" : {
+                "micGain" : 1,
+                "uprightMicUpMicOne" : 1,
+                "uprightMicUpMicTwo" : 2,
+                "uprightMicRightMicOne" : 1,
+                "uprightMicRightMicTwo" : 2,
+                "uprightMicBottomMicOne" : 1,
+                "uprightMicBottomMicTwo" : 2,
+                "uprightMicLeftMicOne" : 1,
+                "uprightMicLeftMicTwo" : 2,
+                "flatMicOne" : 1,
+                "flatMicTwo" : 2,
+                "uprightMicUpLeftBound" : -16,
+                "uprightMicUpRightBound" : 9,
+                "uprightMicRightLeftBound" : -23,
+                "uprightMicRightRightBound" : 17,
+                "uprightMicBottomLeftBound" : -16,
+                "uprightMicBottomRightBound" : 13,
+                "uprightMicLeftLeftBound" : -22,
+                "uprightMicLeftRightBound" : 10,
+                "flatMicLeftBound" : -16,
+                "flatMicRightBound" : 14
+        }
+    },
+    "DFS_mic_config": {
+        "WGR": {
+            "micContent": ["mainmic", "mainmic2"],
+            "micGain": 500.0,
+            "corrResultThread": 1000,
+            "normalizedCorrResultThread": 450
+        },
+        "MRR": {
+            "micContent": ["mainmic", "mainmic2"],
+            "micGain": 250.0,
+            "corrResultThread": 1000,
+            "normalizedCorrResultThread": 480
+        }
+    }
+}

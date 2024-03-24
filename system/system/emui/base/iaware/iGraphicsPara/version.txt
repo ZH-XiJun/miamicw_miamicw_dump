@@ -1,0 +1,6 @@
+version=1.16.21.101
+type=iGraphicsPara
+subtype=generic
+compatibleVersion=1
+displayVersion=GT.GENC.1.16.21.101
+classify=1

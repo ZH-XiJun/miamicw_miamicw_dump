@@ -1,0 +1,6 @@
+version=1.10.20.069
+type=NONCELL
+subtype=generic
+compatibleVersion=1
+displayVersion=NC.GENC.1.10.20.061
+classify=1

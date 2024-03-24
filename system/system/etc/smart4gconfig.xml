@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<map>
+    <boolean name="scene_screen_on_switch" value="false"/>
+    <boolean name="scene_screen_off_switch" value="false"/>
+    <boolean name="scene_inclass_enable" value="true"/>
+    <boolean name="scene_statusbar_down" value="false"/>
+    <boolean name="scene_charging_stop_app" value="true"/>
+    <boolean name="smart_clean_enable" value="true"/>
+    <boolean name="smart4g_white_list_enable" value="false"/>
+    <boolean name="smart4g_fast_dormancy_enable" value="true"/>
+    <boolean name="charging_control_fastdormancy_enable" value="true"/>
+    <int name="sleep_clean_delay_time" value="60"/>
+    <int name="scene_screen_on_time" value="6"/>
+    <int name="scene_screen_off_time" value="300"/>
+
+    <list name="smart_clean_white_list">
+        <string>com.huawei.kidwatch.hwcamera</string>
+        <string>com.huawei.kidwatch.hwgallery</string>
+        <string>com.huawei.kidwatch.hwactivityrecord</string>
+        <string>com.huawei.kidwatch.reward</string>
+        <string>com.android.mms</string>
+        <string>com.huawei.kidwatch.hwalipay</string>
+        <string>com.android.dialer</string>
+        <string>com.huawei.kidwatch.alarmclock</string>
+        <string>com.huawei.kidwatch.weather</string>
+        <string>com.huawei.kidwatch.shakecontacts</string>
+        <string>com.huawei.kidwatch.videochat</string>
+    </list>
+    <list name="smart_clean_black_list">
+        <string>com.huawei.kidwatch.hwalipay</string>
+        <string>com.huawei.kidwatch.kidchat</string>
+    </list>
+
+    <list name="smart4g_white_list">
+        <string>com.huawei.wearable.ota</string>
+    </list>
+</map>

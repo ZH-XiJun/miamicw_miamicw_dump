@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*  ADB INSTALL WHITE LIST
+ * adb install is disabled on this device, except the apps which has signature hash in the whitelist.
+ *
+ * ADD APK TO WHITE LIST AT USER DEBUG VERSION( user debug only )
+ * Try to adb install this apk, get the signuature hash in the err message, and add it to this xml.
+ */
+-->
+<config>
+    <!-- signature hash for all build (user & userdebug) -->
+    <!--platform-->
+    <hash value="-20445689"></hash>
+
+    <hash value="-1434565454"></hash>
+    <hash value="-1790780999"></hash>
+    <hash value="-568538069"></hash>
+    <hash value="1177189021"></hash>
+    <hash value="-1263674583"></hash>
+    <!--avmp-->
+    <hash value="-1639658793"></hash>
+    <!-- cts -->
+    <hash value="-672009692"></hash>
+    <hash value="-1010206528"></hash>
+    <hash value="-1304846210"></hash>
+    <hash value="135397855"></hash>
+    <hash value="-1365232235"></hash>
+    <hash value="-1527810591"></hash>
+    <hash value="-1555762431"></hash>
+    <hash value="2128517457"></hash>
+    <hash value="-32770179"></hash>
+    <hash value="-542933238"></hash>
+    <hash value="-557436788"></hash>
+    <hash value="-987290450"></hash>
+    <hash value="429587208"></hash>
+    <hash value="1099005729"></hash>
+    <hash value="-2016014241"></hash>
+    <hash value="-585088304"></hash>
+    <hash value="-892813540"></hash>
+    <hash value="297056986"></hash>
+    <hash value="-581198890"></hash>
+    <hash value="-1597669051"></hash>
+    <hash value="-585088304"></hash>
+    <hash value="-1298023139"></hash>
+    <hash value="-1455665038"></hash>
+    <hash value="-527572660"></hash>
+    <hash value="-402407420"></hash>
+    <hash value="-217139495"></hash>
+    <hash value="-752427584"></hash>
+    <hash value="-613425856"></hash>
+    <hash value="1173788055"></hash>
+    <hash value="-784069511"></hash>
+    <hash value="1131305888"></hash>
+    <hash value="-473270056"></hash>
+    <hash value="-40371633"></hash>
+
+    <!-- signature hash for userdebug build only -->
+    <hash userdebug-value="-544960092"></hash>
+</config>
+

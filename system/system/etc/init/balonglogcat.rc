@@ -1,0 +1,8 @@
+#on property:ro.build.type=eng
+#    start telemntncat
+service telemntncat /system/bin/dmesgcat -i /proc/telemntn -e b -r 10240 -z 3 -n 1 -f /data/hisi_logs/running_trace/telemntncat-log
+    class late_start
+    user root
+    group system log
+    disabled
+    writepid /dev/cpuset/background/tasks

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<whitelist>
+
+    <item information="com.android.phone|*"/>
+    <item information="com.huawei.android.chr|mdlog.intent.action.LCAGENT"/>
+    <item information="com.huawei.android.chr|chrnetwork.intent.action.not_resume"/>
+    <item information="com.huawei.android.chr|com.huawei.android.chr.configUpdate"/>
+    <item information="com.huawei.kidwatch.childguard|com.huawei.kidwatch.childguard.action.TIMEOUT"/>
+    <item information="com.huawei.kidwatch.commonsetting|*classforbiden"/>
+    <item information="com.huawei.kidwatch.locationservice|*"/>
+    <item information="com.huawei.kidwatch.smart4g|*"/>
+    <item information="com.huawei.wearable.hwid|*"/>
+    <item information="android|DeviceIdleController.deep"/>
+    <item information="android|*push"/>
+
+</whitelist>

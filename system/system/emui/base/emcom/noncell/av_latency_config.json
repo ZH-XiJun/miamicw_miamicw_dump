@@ -1,0 +1,832 @@
+[
+    {
+        "version_major": "1",
+        "version_minor": "1",
+        "latency_base": [
+            {
+                "cast_type": 1,
+                "latency_ms": -1
+            },
+            {
+                "cast_type": 2,
+                "latency_ms": 50
+            },
+            {
+                "cast_type": 3,
+                "latency_ms": 90
+            },
+            {
+                "cast_type": 4,
+                "latency_ms": -1
+            },
+            {
+                "cast_type": 5,
+                "latency_ms": 50
+            },
+            {
+                "cast_type": 6,
+                "latency_ms": 50
+            },
+            {
+                "cast_type": 7,
+                "latency_ms": -1
+            }
+        ],
+        "latency_app": [
+            {
+                "pkg": "com.tencent.qqlive",
+                "label": "腾讯视频",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 200
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 470
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 70
+                    }
+                ]
+            },
+            {
+                "pkg": "tv.danmaku.bili",
+                "label": "哔哩哔哩",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 30
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 70
+                    }
+                ]
+            },
+            {
+                "pkg": "com.qiyi.video",
+                "label": "爱奇艺",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 150
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 30
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": -70
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 170
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 30
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 30
+                    }
+                ]
+            },
+            {
+                "pkg": "com.sohu.sohuvideo",
+                "label": "搜狐视频",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 150
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 60
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 40
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 30
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 60
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 60
+                    }
+                ]
+            },
+            {
+                "pkg": "com.baidu.haokan",
+                "label": "好看视频",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 60
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 80
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 110
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 40
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 80
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 80
+                    }
+                ]
+            },
+            {
+                "pkg": "com.ss.android.article.video",
+                "label": "西瓜视频",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 80
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 120
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": -10
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 120
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 120
+                    }
+                ]
+            },
+            {
+                "pkg": "com.baidu.minivideo",
+                "label": "全民小视频",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 60
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 140
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 35
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 120
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 140
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 140
+                    }
+                ]
+            },
+            {
+                "pkg": "com.duowan.kiwi",
+                "label": "虎牙直播",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 80
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 110
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 20
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 70
+                    }
+                ]
+            },
+            {
+                "pkg": "com.meitu.meipaimv",
+                "label": "美拍",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 70
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 210
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 150
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 30
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 210
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 210
+                    }
+                ]
+            },
+            {
+                "pkg": "com.ss.android.ugc.aweme",
+                "label": "抖音",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 10
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 130
+                    }
+                ]
+            },
+            {
+                "pkg": "com.ss.android.ugc.live",
+                "label": "抖音火山版",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 100
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 160
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 120
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 100
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 160
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 160
+                    }
+                ]
+            },
+            {
+                "pkg": "com.smile.gifmaker",
+                "label": "快手",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 10
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 150
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 490
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 150
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 150
+                    }
+                ]
+            },
+            {
+                "pkg": "com.huawei.himovie",
+                "label": "华为视频",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 230
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": -90
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": -80
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 220
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": -90
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": -90
+                    },
+                    {
+                        "cast_type": 9,
+                        "latency_ms": 200
+                    },
+                    {
+                        "cast_type": 11,
+                        "latency_ms": 200
+                    }
+                ]
+            },
+            {
+                "pkg": "com.baidu.tieba",
+                "label": "百度贴吧",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 50
+                    },
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 20
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 50
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 50
+                    }
+                ]
+            },
+            {
+                "pkg": "com.baidu.searchbox",
+                "label": "百度",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 50
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 150
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 130
+                    }
+                ]
+            },
+            {
+                "pkg": "com.baidu.searchbox.lite",
+                "label": "百度极速版",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 50
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 100
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 450
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 130
+                    }
+                ]
+            },
+            {
+                "pkg": "com.zhihu.android",
+                "label": "知乎",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 10
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 90
+                    },
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 60
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 170
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 90
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 90
+                    }
+                ]
+            },
+            {
+                "pkg": "com.sohu.newsclient",
+                "label": "搜狐新闻",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 90
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 120
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": -40
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 90
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 90
+                    }
+                ]
+            },
+            {
+                "pkg": "com.meelive.ingkee",
+                "label": "映客",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 300
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 100
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 110
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": -50
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 100
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 100
+                    }
+                ]
+            },
+            {
+                "pkg": "com.ss.android.article.news",
+                "label": "今日头条",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": -30
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 70
+                    }
+                ]
+            },
+            {
+                "pkg": "com.ss.android.article.lite",
+                "label": "今日头条极速版",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 130
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": -70
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 70
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 70
+                    }
+                ]
+            },
+            {
+                "pkg": "com.netease.newsreader.activity",
+                "label": "网易新闻",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 170
+                    }
+                ]
+            },
+            {
+                "pkg": "com.youku.phone",
+                "label": "优酷",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 30
+                    }
+                ]
+            },
+            {
+                "pkg": "com.tencent.weishi",
+                "label": "微视",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 130
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 270
+                    }
+                ]
+            },
+            {
+                "pkg": "com.sup.android.superb",
+                "label": "皮皮虾",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 30
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 20
+                    }
+                ]
+            },
+            {
+                "pkg": "com.huawei.browser",
+                "label": "华为浏览器",
+                "latency_ms": [
+                    {
+                        "version_min": -1,
+                        "version_max": -1,
+                        "latency_ms": 100
+                    }
+                ],
+                "latency_base": [
+                    {
+                        "cast_type": 1,
+                        "latency_ms": 140
+                    },
+                    {
+                        "cast_type": 3,
+                        "latency_ms": 110
+                    },
+                    {
+                        "cast_type": 4,
+                        "latency_ms": 50
+                    },
+                    {
+                        "cast_type": 5,
+                        "latency_ms": 140
+                    },
+                    {
+                        "cast_type": 6,
+                        "latency_ms": 140
+                    }
+                ]
+            }
+        ]
+    }
+]

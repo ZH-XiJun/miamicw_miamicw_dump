@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datainitializor >
+  <contact>
+    <name>华为客服</name>
+    <phone>
+      <detail>4008308300</detail>
+      <type>Mobile</type>
+    </phone>
+    <email>
+      <detail>mobile@huawei.com</detail>
+      <type>Mobile</type>
+    </email>
+    <address>
+      <detail>深圳市龙岗区坂田华为基地</detail>
+      <type>Work</type>
+    </address>
+    <avatar>/system/emui/base/media/Hotline_avatar.jpg</avatar>
+  </contact>
+</datainitializor>

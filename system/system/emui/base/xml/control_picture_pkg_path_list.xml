@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policylist>
+<package_policy>
+<package name="com.tencent.gallerymanager"  op="add"/>
+<package name="android.provider.cts"  op="add"/>
+<package name="com.google.android.apps.photos"  op="add"/>
+</package_policy>
+<dir_policy>
+<dir path="Pictures" op="add"/>
+<dir path="DCIM" op="add"/>
+<dir path="Download" op="add"/>
+<dir path="tencent/MicroMsg/WeiXin" op="add"/>
+<dir path="Tencent/QQ_Images" op="add"/>
+<dir path="WLAN Direct" op="add"/>
+<dir path="Huawei Share" op="add"/>
+<dir path="bluetooth" op="add"/>
+<dir videopath="Pictures" op="add"/>
+<dir videopath="DCIM" op="add"/>
+<dir videopath="Download" op="add"/>
+<dir videopath="tencent/MicroMsg/WeiXin" op="add"/>
+<dir videopath="Tencent/QQ_Images" op="add"/>
+<dir videopath="WLAN Direct" op="add"/>
+<dir videopath="Huawei Share" op="add"/>
+<dir videopath="bluetooth" op="add"/>
+</dir_policy>
+</policylist>

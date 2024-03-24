@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<packages>
+<package name="com.huawei.hiview" path="system/app/HiView"/>
+<package name="com.huawei.hiviewtunnel" path="system/app/HiViewTunnel"/>
+<package name="com.huawei.kidwatch.hwactivityrecord" path="system/app/HwActivityRecord"/>
+<package name="com.huawei.kidwatch.alarmclock" path="system/app/hwAlarmClock"/>
+<package name="com.huawei.kidwatch.hwalipay" path="system/app/HwAlipay"/>
+<package name="com.huawei.kidwatch.hwcamera" path="system/app/HwCamera"/>
+<package name="com.huawei.android.chr" path="system/app/HwChrService"/>
+<package name="com.huawei.ims" path="system/app/HwHisiIms"/>
+<package name="com.huawei.lbs" path="system/app/HwLBSService"/>
+<package name="com.huawei.kidwatch.hwropeskipping" path="system/app/HwRopeSkipping"/>
+<package name="com.huawei.kidwatch.smart4g" path="system/app/HwSmart4G"/>
+<package name="com.huawei.kidwatch.hwswimming.activitys" path="system/app/HwSwimming"/>
+<package name="com.huawei.bd" path="system/app/HwUserExperience"/>
+<package name="com.huawei.wearwallet.kid" path="system/app/HwWatchWallet"/>
+<package name="com.huawei.hwwearbr" path="system/app/HwWearBr"/>
+<package name="com.hisi.mapcon" path="system/app/Mapcon"/>
+<package name="com.huawei.nick.chargedischarge" path="system/priv-app/ChargeDischarge"/>
+<package name="com.android.location.fused" path="system/priv-app/FusedLocation"/>
+<package name="com.huawei.wearable.hwid" path="system/priv-app/HwAccountBind"/>
+<package name="com.huawei.kidwatch.childguard" path="system/priv-app/hwChildGuard"/>
+<package name="com.android.huawei.cmccdm" path="system/priv-app/HwChinaMobileDM"/>
+<package name="com.huawei.kidwatch.commonsetting" path="system/priv-app/HwCommonSetting"/>
+<package name="com.huawei.kidwatch.contacts" path="system/priv-app/hwcontacts"/>
+<package name="com.huawei.lctautotest.wifisocket" path="system/priv-app/HwFactorySocket"/>
+<package name="com.huawei.kidwatch.kidchat" path="system/priv-app/HwKidchat"/>
+<package name="com.huawei.kidwatch.locationservice" path="system/priv-app/HwLocationService"/>
+<package name="com.huawei.kidwatch.hwoobe" path="system/priv-app/HwOOBE"/>
+<package name="com.android.systemui" path="system/priv-app/HwSystemUI"/>
+<package name="com.huawei.kidwatch.videochat" path="system/priv-app/HwVideoChat"/>
+<package name="com.huawei.kidwatch.watchsettings" path="system/priv-app/HwWatchSettings"/>
+<package name="com.huawei.kidwatch.wearableservice" path="system/priv-app/HwWearableService"/>
+<package name="com.huawei.wearable.wlupgrade" path="system/priv-app/HwWlUpgrade"/>
+<package name="com.huawei.watch.mmi" path="system/priv-app/Maintenance"/>
+<package name="com.huawei.kidwatch.watchmmitest" path="system/priv-app/MMI3"/>
+<package name="com.android.huawei.autoregistration" path="system/priv-app/TelecomDataAutoRegistration"/>
+<package name="com.android.huawei.smsautoregistration" path="system/priv-app/TelecomSmsAutoRegistration"/>
+<package name="com.huawei.kidwatch.watchwificontroller" path="system/priv-app/WatchWifiController"/>
+<package name="com.huawei.wearable.ota" path="system/priv-app/WearableOta"/>
+<package name="com.huawei.appmarketwear" path="system/priv-app/wearMarket"/>
+</packages>

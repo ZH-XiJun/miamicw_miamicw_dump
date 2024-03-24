@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<exceptions version="1">
+	<exception package="com.huawei.kidwatch.hwactivityrecord">
+		<permission name="android.permission.ACTIVITY_RECOGNITION" fixed="true"/>
+	</exception>
+</exceptions>

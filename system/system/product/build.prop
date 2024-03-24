@@ -1,0 +1,5 @@
+
+#
+# ADDITIONAL PRODUCT PROPERTIES
+#
+dalvik.vm.systemservercompilerfilter=speed-profile

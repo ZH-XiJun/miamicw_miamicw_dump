@@ -1,0 +1,6 @@
+version=1.10.21.108
+type=THIRDAPPFILTER
+subtype=generic
+compatibleVersion=2
+classify=1
+displayVersion=TF.GENC.1.10.21.108
